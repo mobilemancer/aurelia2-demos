@@ -1,0 +1,42 @@
+{
+  "name": "DI",
+  "description": "An Aurelia 2 client application.",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "???"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "aurelia": "dev"
+  },
+  "devDependencies": {
+    "htmlhint": "^0.11.0",
+    "@aurelia/plugin-gulp": "dev",
+    "gulp": "^4.0.0",
+    "gulp-dumber": "^1.0.0",
+    "gulp-typescript": "^5.0.0",
+    "gulp-plumber": "^1.0.0",
+    "merge2": "^1.0.0",
+    "gulp-terser": "^1.0.0",
+    "gulp-if": "^2.0.0",
+    "del": "^5.0.0",
+    "browser-sync": "^2.0.0",
+    "connect-history-api-fallback": "^1.0.0",
+    "cross-env": "^5.0.0",
+    "gulp-postcss": "^8.0.0",
+    "autoprefixer": "^9.0.0",
+    "postcss-url": "^8.0.0",
+    "@types/node": "^12.0.0",
+    "typescript": "^3.0.0",
+    "tslint": "^5.0.0"
+  },
+  "scripts": {
+    "lint:html": "htmlhint -c .htmlhintrc src",
+    "lint": "npm run lint:js && npm run lint:html",
+    "start": "gulp",
+    "build": "gulp clean && cross-env NODE_ENV=production gulp build",
+    "clear-cache": "gulp clear-cache",
+    "lint:js": "tslint --project tsconfig.json"
+  }
+}

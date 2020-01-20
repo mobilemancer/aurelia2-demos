@@ -1,0 +1,10 @@
+.sup {
+  width: 400px;
+  height: 200px;
+  margin: 10px auto;
+  border: 1px solid aquamarine;
+  background-color: azure;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 200px;
+}

@@ -1,19 +1,13 @@
-import { inject } from 'aurelia';
-
 import { IMyService } from './IMyService';
 
-@inject()
 export class MyApp {
-  // public inject = [IMyService];
-  public message = 'Hello World!';
+  // public static inject = [IMyService];
+  public message = '';
 
-  constructor(private service: IMyService) {
-    console.warn(service.serviceName);
-  }
+  constructor(@IMyService private service: IMyService) { }
 
   public clicked() {
-    console.warn(this.service.serviceName);
-    console.warn(this.service.action.call(this));
+    this.message = this.service.action.call(this);
   }
 
 }

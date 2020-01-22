@@ -1,5 +1,11 @@
-<button click.trigger="clicked()">Click Me!</button>
+<div class="box color-1">Injected service: ${service.serviceName}</div>
 
-<div>Service name: ${service.serviceName}</div>
 
-<div>Message from service: ${message}</div>
+<div class="center">
+    <button class="center" click.trigger="clicked()">Activate Service!</button>
+</div>
+
+
+<div class="box color-1">
+    <span style="display:block">Service message: ${serviceMessage}</span>
+</div>

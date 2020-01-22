@@ -1,0 +1,20 @@
+.box {
+  width: 400px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 200px;
+}
+
+.color--1 {
+  border: 1px solid aquamarine;
+  background-color: azure;
+  color: rgb(62, 0, 88);
+}
+
+.color-2 {
+  border: 1px solid rgb(33, 202, 146);
+  background-color: rgb(91, 241, 191);
+  color: rgb(62, 0, 88);
+}

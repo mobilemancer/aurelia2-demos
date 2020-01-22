@@ -1,13 +1,14 @@
 import { IMyService } from './IMyService';
 
+// @inject(IMyService)
 export class MyApp {
   // public static inject = [IMyService];
-  public message = '';
+  public serviceMessage = '';
 
   constructor(@IMyService private service: IMyService) { }
 
   public clicked() {
-    this.message = this.service.action.call(this);
+    this.serviceMessage = this.service.action.call(this);
   }
 
 }

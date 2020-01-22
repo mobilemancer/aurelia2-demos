@@ -1,0 +1,1 @@
+export * from './composed-component/composed-component';

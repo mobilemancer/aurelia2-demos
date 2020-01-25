@@ -55,6 +55,12 @@ button:active {
   color: rgb(62, 0, 88);
 }
 
+:global(.color-3) {
+  border: 1px solid rgb(62, 0, 88);
+  background-color: rgb(83, 48, 133);
+  color: white;
+}
+
 .center {
   margin: 10px auto;
   text-align: center;

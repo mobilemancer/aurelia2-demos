@@ -1,7 +1,7 @@
 export class MyApp {
   public name = 'Andreas';
 
-  beforeAttach() {
-    console.log(this);
+  private beforeAttach() {
+    // console.log(this);
   }
 }

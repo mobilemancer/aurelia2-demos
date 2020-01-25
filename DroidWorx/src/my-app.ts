@@ -11,6 +11,7 @@ export class MyApp {
     this.router.setNav('main', [
       { title: 'Home', route: 'home' },
       { title: 'About', route: 'about' },
+      { title: 'Legends', route: 'legends' },
     ]);
   }
 

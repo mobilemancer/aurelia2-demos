@@ -8,7 +8,7 @@ export class MyApp {
   }
 
   public beforeBind() {
-    this.setRoutes();
+    // this.setRoutes();
   }
 
   private setRoutes() {

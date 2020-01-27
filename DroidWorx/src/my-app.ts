@@ -4,15 +4,15 @@ export class MyApp {
   constructor(@IRouter private router: IRouter) { }
 
   public beforeBind() {
-    this.setRoutes();
+    // this.setRoutes();
   }
 
-  private setRoutes() {
-    this.router.setNav('main', [
-      { title: 'Home', route: 'home' },
-      { title: 'About', route: 'about' },
-      { title: 'Legends', route: 'legends' },
-    ]);
-  }
+  // private setRoutes() {
+  //   this.router.setNav('main', [
+  //     { title: 'Home', route: 'home' },
+  //     { title: 'About', route: 'about' },
+  //     { title: 'Legends', route: 'legends' },
+  //   ]);
+  // }
 
 }

@@ -2,15 +2,6 @@ import { bindable, CustomElement, customElement } from 'aurelia';
 import template1 from './template-empire.html';
 import template2 from './template-rebel.html';
 
-// @customElement(
-//     {
-//         name: 'legend-component',
-//         template: ''
-//     })
-// export class NoConventions {
-//     public name = 'John';
-// }
-
 export const LegendComponent =
     CustomElement.define(
         {
@@ -25,12 +16,14 @@ export const LegendComponent =
     );
 
 function templateSelector(names: string[]) {
-    if (names.length === 0) {
-        return '<div class="box-small color-3">Hello!</div>';
-    }
-    if (names.length === 1) {
-        return template1;
-    } else {
-        return template2;
-    }
+    // if (names.length === 0) {
+    //     return '<div class="box-small color-3">Hello!</div>';
+    // }
+    // if (names.length === 1) {
+    //     return template1;
+    // } else {
+    //     return template2;
+    // }
+
+    return 'hai!';
 }

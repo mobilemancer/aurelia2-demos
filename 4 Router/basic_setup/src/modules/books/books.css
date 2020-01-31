@@ -1,0 +1,14 @@
+.books-view {
+  position: fixed;
+  display: inline-block;
+  width: 50%;
+  height: 90vh;
+}
+
+.details-view {
+  position: fixed;
+  display: inline-block;
+  right: 0;
+  width: 50%;
+  height: 90vh;
+}

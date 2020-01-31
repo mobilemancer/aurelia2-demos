@@ -1,18 +1,15 @@
+import { BookService } from './../../services/bookService';
 export class Details {
-    public author: string;
-    public published: number;
-    public title: string;
-    public genre: string;
+    public book;
 
-    constructor(p) {
-    }
+    constructor(private bookService: BookService) { }
 
-    private enter(p) {
-        this.author = p[0];
-        this.genre = p[1];
-        this.published = p[2];
-        this.title = p[3];
+    public enter(bookId) {
+        if (typeof (bookId) === "object") {
+            bookId = bookId[0];
+        }
 
+        this.book = this.bookService.getBook(bookId);
     }
 
 }

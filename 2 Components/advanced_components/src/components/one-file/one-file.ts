@@ -10,13 +10,12 @@ const droidModel = [
 export const OneFile =
     CustomElement.define(
         {
-            // bindables: ['droidModel'],
             name: 'one-file',
             template: templateSelector(droidModel),
         }
         ,
         class {
-            public static bindables = { model: { property: 'model', attribute: 'model' } };
+            public static bindables = ['model']; //{ model: { property: 'model', attribute: 'model' } };
             public model = droidModel;
         }
     );

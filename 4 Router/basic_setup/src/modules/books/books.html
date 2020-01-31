@@ -1,15 +1,17 @@
 <import from='./details'></import>
 <import from='./book-overview.html'></import>
 
-<h1>Books</h1>
+<div class="books">
 
-<div repeat.for="book of bookList">
-    <a goto='details(${book.author}, ${book.genre}, ${book.published}, ${book.title})'>
-        <book-overview book.bind="book"></book-overview>
-    </a>
+    <h1>Reading List</h1>
+
+    <div repeat.for="book of bookList">
+        <a goto='details(${book.id})'>
+            <book-overview book.bind="book"></book-overview>
+        </a>
+    </div>
+
+    <a goto='-@detailsport'><button>Clear</button></a>
+    <au-viewport name="detailsport" default="-"></au-viewport>
+
 </div>
-
-
-
-<a goto='-@detailsport'>Clear</a>
-<au-viewport name="detailsport"></au-viewport>

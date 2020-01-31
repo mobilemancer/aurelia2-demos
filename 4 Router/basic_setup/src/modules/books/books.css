@@ -15,6 +15,13 @@
 
 .cover-image {
   display: inline-block;
+  max-width: 192px;
+}
+
+/* resize images */
+.cover-image img {
+  width: 100%;
+  height: auto;
 }
 
 .publishing-details {

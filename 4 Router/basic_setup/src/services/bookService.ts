@@ -13,7 +13,7 @@ export class BookService {
                 description: this.duneDescription,
                 genre: 'Science Fiction',
                 id: 1,
-                image: 'Dune-Frank_Herbert_(1965)_First_edition.jpg',
+                image: 'dune.jpg',
                 published: 1965,
                 title: 'Dune',
             }, {
@@ -64,7 +64,7 @@ export class BookService {
     }
 
     public getBook(bookId: number): any {
-        return this.books[bookId];
+        return this.books[bookId - 1];
     }
 
 }

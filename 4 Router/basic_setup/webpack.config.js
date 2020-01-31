@@ -12,7 +12,7 @@ const postcssLoader = {
   }
 };
 
-module.exports = function(env) {
+module.exports = function (env) {
   const production = env === 'production' || process.env.NODE_ENV === 'production';
   return {
     mode: production ? 'production' : 'development',
@@ -34,9 +34,10 @@ module.exports = function(env) {
     },
     module: {
       rules: [
-        { test: /\.css$/i, use: [ "style-loader", cssLoader, postcssLoader ] },
+        { test: /\.css$/i, use: ["style-loader", cssLoader, postcssLoader] },
         { test: /\.ts$/i, use: ['ts-loader', '@aurelia/webpack-loader'], exclude: /node_modules/ },
-        { test: /\.html$/i, use: '@aurelia/webpack-loader', exclude: /node_modules/ }
+        { test: /\.html$/i, use: '@aurelia/webpack-loader', exclude: /node_modules/ },
+        { test: /\.(png|svg|jpg|gif)$/i, use: 'file-loader', exclude: /node_modules/ }
       ]
     },
     plugins: [

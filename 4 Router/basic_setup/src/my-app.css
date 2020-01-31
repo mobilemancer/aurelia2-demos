@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: calc(100vh - 32px);
   background-color: #200020;
   color: #ffffff;
   margin: 0px;
@@ -10,17 +10,4 @@ body {
 a {
   color: #dddddd;
   text-decoration: none;
-}
-
-.box {
-  width: 400px;
-  border: 1px solid black;
-  padding: 16px;
-  background-color: #301020;
-  margin-bottom: 8px;
-}
-
-.title {
-  font-weight: 600;
-  font-size: larger;
 }

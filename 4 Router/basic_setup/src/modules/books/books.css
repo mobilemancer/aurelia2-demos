@@ -1,14 +1,40 @@
+.column {
+  width: 40%;
+  height: 100%;
+  margin: 16px;
+}
+
 .books-view {
   position: fixed;
+  left: 0;
+}
+
+.details-header {
+  margin-bottom: 16px;
+}
+
+.cover-image {
   display: inline-block;
-  width: 50%;
-  height: 90vh;
+}
+
+.publishing-details {
+  display: inline-block;
 }
 
 .details-view {
   position: fixed;
-  display: inline-block;
   right: 0;
-  width: 50%;
-  height: 90vh;
+}
+
+.box {
+  width: 400px;
+  border: 1px solid black;
+  padding: 16px;
+  background-color: #301020;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: larger;
 }

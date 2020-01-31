@@ -1,21 +1,26 @@
 <h2>Details</h2>
 
-<div>
-    ${book.title}
+<div class="details-header">
+    <div class="cover-image">
+        <img src.bind="cover" />
+    </div>
+
+    <div class="publishing-details">
+        <div class="title">
+            ${book.title}
+        </div>
+
+        <div>
+            ${book.author}, ${book.published}
+        </div>
+
+        <div>
+            ${book.genre}
+        </div>
+    </div>
 </div>
 
-<div>
-    ${book.author}, ${book.published}
-</div>
 
-<div>
-    ${book.genre}
-</div>
-
-<div>
-    ${book.image}
-</div>
-
-<div>
+<div class="description">
     ${book.description}
 </div>

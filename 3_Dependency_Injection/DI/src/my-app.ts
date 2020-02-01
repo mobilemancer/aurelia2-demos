@@ -2,6 +2,7 @@ import { IMyService } from './IMyService';
 
 // @inject(IMyService)
 export class MyApp {
+
   // public static inject = [IMyService];
   public serviceMessage = '';
 

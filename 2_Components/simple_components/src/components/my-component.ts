@@ -1,5 +1,5 @@
-import { bindable } from "aurelia";
+import { bindable } from 'aurelia';
 
 export class MyComponent {
-    @bindable public name = "Future Aurelia Fans";
+    @bindable public subject = "Future Aurelia Fans";
 }

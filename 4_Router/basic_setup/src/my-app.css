@@ -1,0 +1,27 @@
+:root {
+  --padding-normal: 32px;
+  --padding-small: 16px;
+  --line-height-menu: 24px;
+}
+
+body {
+  height: calc(100vh - 2 * var(--padding-normal));
+  background-color: #200020;
+  color: #ffffff;
+  margin: 0px;
+  padding: var(--padding-normal);
+  font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+a {
+  color: #dddddd;
+  text-decoration: none;
+}
+
+.menu {
+  font-size: large;
+}
+
+.menu .goto-active {
+  text-decoration: underline;
+}

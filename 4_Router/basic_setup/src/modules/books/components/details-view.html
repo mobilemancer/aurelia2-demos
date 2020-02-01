@@ -1,9 +1,7 @@
-<h2>Details</h2>
+<h2 class="inline">Book Details</h2>
+<h2 class="inline pull-right"><a goto='../-@detailsport'>❌</a></h2>
 
 <div class="details-header">
-    <div class="cover-image">
-        <img src.bind="cover" />
-    </div>
 
     <div class="publishing-details">
         <div class="title">
@@ -18,9 +16,16 @@
             ${book.genre}
         </div>
     </div>
+
+    <div class="cover-image">
+        <img src.bind="cover" />
+    </div>
+
 </div>
 
 
 <div class="description">
     ${book.description}
 </div>
+
+<!-- <a goto='../-@detailsport'><button>Close</button></a> -->

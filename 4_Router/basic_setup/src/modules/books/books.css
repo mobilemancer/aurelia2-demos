@@ -1,7 +1,7 @@
 .column {
   width: 40%;
-  height: 100%;
-  margin: 16px;
+  height: calc(100% - var(--line-height-menu) - 3 * var(--padding-normal));
+  margin: var(--padding-normal);
 }
 
 .books-view {
@@ -9,8 +9,13 @@
   left: 0;
 }
 
+.books-list {
+  overflow-y: scroll;
+  height: calc(100% - 3 * var(--padding-normal));
+}
+
 .details-header {
-  margin-bottom: 16px;
+  margin-bottom: var(--padding-normal);
 }
 
 .cover-image {
@@ -25,7 +30,10 @@
 }
 
 .publishing-details {
+  margin-right: var(--padding-normal);
   display: inline-block;
+  vertical-align: top;
+  text-align: end;
 }
 
 .details-view {
@@ -34,11 +42,11 @@
 }
 
 .box {
-  width: 400px;
+  width: calc(100% - 3 * var(--padding-normal));
   border: 1px solid black;
-  padding: 16px;
+  padding: var(--padding-normal);
   background-color: #301020;
-  margin-bottom: 8px;
+  margin-bottom: var(--padding-normal);
 }
 
 .title {

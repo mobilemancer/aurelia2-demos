@@ -1,0 +1,24 @@
+<import from='./components/details-view'></import>
+<import from='./components/book-overview.html'></import>
+
+<div>
+
+    <div class="books-view column">
+
+        <h1>Reading List</h1>
+
+        <div class="books-list">
+
+            <div repeat.for="book of bookList">
+                <a goto='details-view(${book.id})'>
+                    <book-overview book.bind="book"></book-overview>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <au-viewport class="details-view column" name="detailsport" default="-"></au-viewport>
+
+</div>

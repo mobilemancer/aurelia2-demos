@@ -10,7 +10,7 @@
 }
 
 .books-list {
-  overflow-y: hidden;
+  overflow-y: auto;
   height: calc(100% - 3 * var(--padding-normal));
 }
 

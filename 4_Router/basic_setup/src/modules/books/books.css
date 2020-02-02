@@ -10,7 +10,7 @@
 }
 
 .books-list {
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: calc(100% - 3 * var(--padding-normal));
 }
 
@@ -46,7 +46,7 @@
   border: 1px solid black;
   padding: var(--padding-normal);
   background-color: #301020;
-  margin-bottom: var(--padding-normal);
+  margin-bottom: var(--padding-small);
 }
 
 .title {

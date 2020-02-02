@@ -22,6 +22,10 @@ a {
   font-size: large;
 }
 
+.menu a {
+  margin-right: var(--padding-small);
+}
+
 .menu .goto-active {
   text-decoration: underline;
 }

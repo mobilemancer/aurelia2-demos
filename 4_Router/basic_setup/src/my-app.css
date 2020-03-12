@@ -3,8 +3,11 @@
   --padding-small: 16px;
   --line-height-menu: 24px;
   --color-bg-main: #eeeeee;
+  --color-bg-header: #71108a;
+  --color-bg-header-detail: #961eb4;
   --color-fg-main: #333333;
   --color-fg-link: #aa23cc;
+  --color-fg-header: #eeeeee;
 }
 
 body {
@@ -12,7 +15,7 @@ body {
   background-color: var(--color-bg-main);
   color: var(--color-fg-main);
   margin: 0px;
-  padding: var(--padding-normal);
+  padding: 0px;
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -23,6 +26,7 @@ a {
 
 .menu {
   font-size: large;
+  padding: var(--padding-normal);
 }
 
 .menu a {
@@ -32,3 +36,28 @@ a {
 .menu .goto-active {
   text-decoration: underline;
 }
+
+.page {
+  padding: var(--padding-normal);
+}
+
+.header {
+  background-color: var(--color-bg-header);
+  color: var(--color-fg-header);
+}
+
+.header .title {
+  font-size: x-large;
+  padding: var(--padding-normal);
+}
+
+.header-detail {
+  background-color: var(--color-bg-header-detail);
+  color: var(--color-fg-header);
+}
+
+.header-detail .title {
+  font-size: x-large;
+  padding: var(--padding-normal);
+}
+

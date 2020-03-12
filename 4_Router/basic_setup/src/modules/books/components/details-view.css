@@ -1,3 +1,13 @@
+article {
+  padding: var(--padding-normal);
+}
+
+article .title {
+  font-weight: 600;
+  font-size: larger;
+  color: var(--color-bg-header);
+}
+
 .inline {
   display: inline-block;
 }

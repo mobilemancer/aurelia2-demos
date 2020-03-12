@@ -45,7 +45,7 @@
   width: calc(100% - 3 * var(--padding-normal));
   border: 1px solid black;
   padding: var(--padding-normal);
-  background-color: #301020;
+  background-color: va(--color-bg-main);
   margin-bottom: var(--padding-small);
 }
 

@@ -1,29 +1,33 @@
 <h2 class="inline">Book Details</h2>
 <h3 class="inline pull-right"><a goto='../-@detailsport'>❌</a></h3>
 
-<div class="details-header">
+<article>
 
-    <div class="publishing-details">
-        <div class="title">
-            ${book.title}
+    <div class="details-header">
+
+        <div class="publishing-details">
+            <div class="title">
+                ${book.title}
+            </div>
+
+            <div>
+                ${book.author}, ${book.published}
+            </div>
+
+            <div>
+                ${book.genre}
+            </div>
         </div>
 
-        <div>
-            ${book.author}, ${book.published}
+        <div class="cover-image">
+            <img src.bind="cover" />
         </div>
 
-        <div>
-            ${book.genre}
-        </div>
     </div>
 
-    <div class="cover-image">
-        <img src.bind="cover" />
+
+    <div class="description">
+        ${book.description}
     </div>
 
-</div>
-
-
-<div class="description">
-    ${book.description}
-</div>
+</article>

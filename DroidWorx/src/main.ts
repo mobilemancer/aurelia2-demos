@@ -5,7 +5,7 @@ import * as Components from './components/_components';
 
 Aurelia
     .register(
-        StyleConfiguration.cssModulesProcessor(),
+        // StyleConfiguration.cssModulesProcessor(),
         RouterConfiguration,
         Modules,
         Components

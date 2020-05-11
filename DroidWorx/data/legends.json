@@ -1,40 +1,40 @@
 [
     {
         "name": "R2-D2",
-        "allegiance": "Allegiance.Rebellion",
-        "productLine": "ProductLine.RSeries",
-        "manufacturer": "Manufacturer.IndustrialAutomaton",
+        "allegiance": "Rebellion",
+        "productLine": "RSeries",
+        "manufacturer": "IndustrialAutomaton",
         "height": 1.09,
         "mass": 32,
-        "sensorColor": "SensorColor.Red",
+        "sensorColor": "Red",
         "image": "r2-d2.png"
     },
     {
         "name": "C-3PO",
-        "allegiance": "Allegiance.Rebellion",
-        "manufacturer": "Manufacturer.CybotGalactica",
+        "allegiance": "Rebellion",
+        "manufacturer": "CybotGalactica",
         "height": 1.71,
         "mass": 75,
-        "sensorColor": "SensorColor.Yellow",
+        "sensorColor": "Yellow",
         "image": "c-3po.jpg"
     },
     {
         "name": "IG-88B",
-        "allegiance": "Allegiance.FreeAgent",
-        "manufacturer": "Manufacturer.HolowanLaboratories",
+        "allegiance": "FreeAgent",
+        "manufacturer": "HolowanLaboratories",
         "height": 1.96,
         "mass": 140,
-        "sensorColor": "SensorColor.Red",
+        "sensorColor": "Red",
         "image": "ig-88.png"
     },
     {
         "name": "WED-15I7",
-        "allegiance": "Allegiance.Imperial",
-        "productLine": "ProductLine.RSeries",
-        "manufacturer": "Manufacturer.CybotGalactica",
+        "allegiance": "Imperial",
+        "productLine": "RSeries",
+        "manufacturer": "CybotGalactica",
         "height": 1,
         "mass": 35,
-        "sensorColor": "SensorColor.Black",
+        "sensorColor": "Black",
         "about": "WED15-I7 was known to be fiercely loyal to the Empire. It specialized in extending effective operational life to Imperial machines aboard the original Death Star. It was nicknamed after the septoid, an insect native to the planet Eriadu. Like all other droids aboard the Death Star, WED15-17 was lost when the Rebel Alliance destroyed the battle station during the Battle of Yavin.",
         "image": "wed-15.jpg"
     }

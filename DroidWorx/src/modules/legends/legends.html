@@ -2,5 +2,7 @@
 
 <div repeat.for="droid of legends">
     <!-- <legend-component droid.bind="droid"> -->
-    <au-compose subject.bind="droid | view:elementName"></au-compose>
+    <!-- <au-compose subject.bind="droid | view:elementName"></au-compose> -->
+    <droid-component droid.bind="droid"></droid-component>
+
 </div>

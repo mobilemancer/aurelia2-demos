@@ -9,4 +9,5 @@ Aurelia
         RouterConfiguration,
         BookService
     )
-    .app(MyApp).start();
+    .app(MyApp)
+    .start();

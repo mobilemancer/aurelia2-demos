@@ -1,1 +1,1 @@
-export * from './legend-component/legend-component';
+export * from './droid-component/droid-component';

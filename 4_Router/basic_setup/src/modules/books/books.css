@@ -1,7 +1,6 @@
 .column {
-  width: 40%;
+  width: 50%;
   height: calc(100% - var(--line-height-menu) - 3 * var(--padding-normal));
-  margin: var(--padding-normal);
 }
 
 .books-view {
@@ -10,7 +9,7 @@
 }
 
 .books-list {
-  overflow-y: hidden;
+  overflow-y: auto;
   height: calc(100% - 3 * var(--padding-normal));
 }
 
@@ -41,15 +40,14 @@
   right: 0;
 }
 
-.box {
-  width: calc(100% - 3 * var(--padding-normal));
-  border: 1px solid black;
-  padding: var(--padding-normal);
-  background-color: #301020;
-  margin-bottom: var(--padding-small);
-}
-
 .title {
   font-weight: 600;
   font-size: larger;
+}
+
+.box {
+  width: calc(100% - 3 * var(--padding-normal));
+  border-bottom: 1px solid rgb(133, 104, 128, 0.4);
+  padding: var(--padding-normal);
+  background-color: va(--color-bg-main);
 }

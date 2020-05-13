@@ -1,41 +1,79 @@
 [
-    {
-        "name": "R2-D2",
-        "allegiance": "Rebellion",
-        "productLine": "RSeries",
-        "manufacturer": "IndustrialAutomaton",
-        "height": 1.09,
-        "mass": 32,
-        "sensorColor": "Red",
-        "image": "r2-d2.png"
-    },
-    {
-        "name": "C-3PO",
-        "allegiance": "Rebellion",
-        "manufacturer": "CybotGalactica",
-        "height": 1.71,
-        "mass": 75,
-        "sensorColor": "Yellow",
-        "image": "c-3po.jpg"
-    },
-    {
-        "name": "IG-88B",
-        "allegiance": "FreeAgent",
-        "manufacturer": "HolowanLaboratories",
-        "height": 1.96,
-        "mass": 140,
-        "sensorColor": "Red",
-        "image": "ig-88.png"
-    },
-    {
-        "name": "WED-15I7",
-        "allegiance": "Imperial",
-        "productLine": "RSeries",
-        "manufacturer": "CybotGalactica",
-        "height": 1,
-        "mass": 35,
-        "sensorColor": "Black",
-        "about": "WED15-I7 was known to be fiercely loyal to the Empire. It specialized in extending effective operational life to Imperial machines aboard the original Death Star. It was nicknamed after the septoid, an insect native to the planet Eriadu. Like all other droids aboard the Death Star, WED15-17 was lost when the Rebel Alliance destroyed the battle station during the Battle of Yavin.",
-        "image": "wed-15.jpg"
-    }
+  {
+    "about": "A smart, spunky droid who would serve a multitude of masters over his lifetime, R2-D2 was never given a full memory wipe nor did he ever receive new programming, with these factors resulting in an adventurous and independent attitude. Often finding himself in pivotal moments in galactic history, his bravery and ingenuity saved the galaxy on numerous occasions.",
+    "allegiance": "Rebellion",
+    "height": 1.09,
+    "image": "r2-d2.png",
+    "manufacturer": "Industrial Automaton",
+    "mass": 32,
+    "name": "R2-D2",
+    "productLine": "R-Series",
+    "sensorColor": "Red"
+  },
+  {
+    "about": "C-3PO was rebuilt from spare parts by Anakin Skywalker, a human slave who lived in Mos Espa, a city on the Outer Rim world of Tatooine. C-3PO and his companion R2-D2 became embroiled in the Galactic Civil War when Leia Organa of the Rebel Alliance entrusted them to bring a copy of the Death Star plans to the Jedi Master Obi-Wan Kenobi on Tatooine.",
+    "allegiance": "Rebellion",
+    "height": 1.71,
+    "image": "c-3po.png",
+    "manufacturer": "Cybot Galactica",
+    "mass": 75,
+    "name": "C-3PO",
+    "productLine": "3PO-series Protocol Droid",
+    "sensorColor": "Yellow"
+  },
+  {
+    "about": "IG-88B, often referred to simply as \"IG-88\" by others, became a legend among bounty hunters.[3] He became known as the second-best bounty hunter in the galaxy—second only to Boba Fett.",
+    "allegiance": "FreeAgent",
+    "height": 1.96,
+    "image": "ig-88.png",
+    "manufacturer": "Holowan Laboratories",
+    "mass": 140,
+    "name": "IG-88B",
+    "productLine": "IG-88 Assassin Droid",
+    "sensorColor": "Red"
+  },
+  {
+    "about": "WED15-I7 was known to be fiercely loyal to the Empire. It specialized in extending effective operational life to Imperial machines aboard the original Death Star. It was nicknamed after the septoid, an insect native to the planet Eriadu. Like all other droids aboard the Death Star, WED15-17 was lost when the Rebel Alliance destroyed the battle station during the Battle of Yavin.",
+    "allegiance": "Imperial",
+    "height": 1,
+    "image": "wed-15.png",
+    "manufacturer": "Cybot Galactica",
+    "mass": 35,
+    "name": "WED-15I7",
+    "productLine": "WED Treadwell Repair Droid",
+    "sensorColor": "Black"
+  },
+  {
+    "about": "K-2SO accompanied Jyn, Cassian, and their companions on an unsanctioned mission to steal the Death Star plans from the planet Scarif. This rebel strike team became known as Rogue One.",
+    "allegiance": "Rebellion",
+    "height": 2.16,
+    "image": "k2-so.png",
+    "manufacturer": "Arakyd Industries",
+    "mass": 0,
+    "name": "K-2SO",
+    "productLine": "KX-series",
+    "sensorColor": "White"
+  },
+  {
+    "about": "BB-9E was assigned to the Mega-class Star Dreadnought Supremacy, the flagship of Supreme Leader Snoke, where it performed its usual duties by keeping machinery, procedures, and potential intruders in check.",
+    "allegiance": "First Order",
+    "height": 0.67,
+    "image": "bb-9e.png",
+    "manufacturer": "Arakyd Industries",
+    "mass": 0,
+    "name": "BB-9E",
+    "productLine": "BB-series Astromech",
+    "sensorColor": "Red"
+  },
+  {
+    "about": "The Hutt crime lord Jabba Desilijic Tiure had one fitted into the front gate of his palace on Tatooine, which was considered to be one of the most infamous and annoying examples ever in use.",
+    "allegiance": "Various",
+    "height": 0,
+    "image": "tt-8l.png",
+    "manufacturer": "Serv-O-Droid Inc",
+    "mass": 0,
+    "name": "TT-8L/Y7",
+    "productLine": "TT-8L gatekeeper droid",
+    "sensorColor": "Orange"
+  }
 ]

@@ -1,10 +1,16 @@
 <article>
-    <h1>${droid.name}</h1>
-    <div>
-        By: ${droid.manufacturer}
+  <div class="droid-component">
+    <div class="heading">${droid.name}</div>
+    <div class="manufacturer">
+      By: ${droid.manufacturer}
     </div>
-    <div>
-        Specs ${droid.height}m ${droid.mass}kg
+    <div class="specs">
+      Specs ${droid.height}m ${droid.mass}kg
     </div>
-
+    <div class="product-line">${droid.productLine}</div>
+    <div class="allegiance">${droid.allegiance}</div>
+    <div class="sensor-color">${droid.sensorColor}</div>
+    <blockquote class="about">${droid.about}</blockquote>
+    <div class="image">${droid.image}</div>
+  </div>
 </article>

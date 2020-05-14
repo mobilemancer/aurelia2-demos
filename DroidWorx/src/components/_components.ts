@@ -1,1 +1,2 @@
-export * from './droid-component/droid-component';
+export * from "./nav-menu/nav-menu";
+export * from "./droid-component/droid-component";

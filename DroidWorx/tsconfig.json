@@ -2,10 +2,6 @@
   "compilerOptions": {
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
     "module": "esnext",
     "moduleResolution": "node",
     "skipLibCheck": true,
@@ -17,5 +13,8 @@
   "include": [
     "test",
     "src"
+  ],
+  "files": [
+    "src/resource.d.ts"
   ]
 }

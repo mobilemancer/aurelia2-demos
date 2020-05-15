@@ -5,5 +5,6 @@ import { IDroid } from "./IDroid";
 export const IDataService = DI.createInterface<IDataService>();
 
 export interface IDataService {
-    legends: IDroid[];
+  legends: IDroid[];
+  getLegend: IDroid;
 }

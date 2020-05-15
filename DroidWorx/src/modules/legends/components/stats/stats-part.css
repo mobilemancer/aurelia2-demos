@@ -1,0 +1,41 @@
+.container {
+  display: block;
+  height: 100%;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.header {
+  border-bottom: 1px solid black;
+  background-color: var(--color--primary-dark-background);
+  color: var(--color--primary-dark-foreground);
+  height: var(--menu-height);
+}
+
+.stats {
+  overflow-y: scroll;
+  height: calc(100% - var(--menu-height));
+}
+.heading {
+  font-family: var(--font-family--header);
+  padding: var(--padding-default);
+}
+
+.stat-row {
+  border-bottom: 1px solid black;
+}
+
+.quantity {
+  font-family: var(--font-family--header);
+  padding: var(--padding-default);
+  border-right: 1px solid black;
+  width: 200px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.measurement {
+  font-family: var(--font-family--header);
+  padding: var(--padding-default);
+}

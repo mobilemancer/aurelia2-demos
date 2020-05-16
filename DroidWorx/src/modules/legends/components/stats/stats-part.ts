@@ -1,23 +1,23 @@
-import { IDroid } from "./../../../../common/IDroid";
+import { ILegend } from './../../../../common/ILegend';
 import { IDataService } from "../../../../common/IDataService";
 import { DataService } from "../../../../services/dataService";
 
 export class StatsPart {
-  public droid: IDroid;
+  public legend: ILegend;
 
   public get calculatedMass(): string {
-    return this.droid.mass !== 0 ? this.droid.mass + " kg" : "Unknown";
+    return this.legend.mass !== 0 ? this.legend.mass + " kg" : "Unknown";
   }
 
   public get calculatedHeight(): string {
-    return this.droid.height !== 0 ? this.droid.height + " m" : "Unknown";
+    return this.legend.height !== 0 ? this.legend.height + " m" : "Unknown";
   }
 
-  constructor(@IDataService private dataService: DataService) {}
+  constructor(@IDataService private dataService: DataService) { }
 
-  public enter(droidName: object) {
-    if (!droidName || !droidName[0]) return false;
+  public enter(legendName: object) {
+    if (!legendName || !legendName[0]) return false;
 
-    this.droid = this.dataService.getLegend(droidName[0]);
+    this.legend = this.dataService.getLegend(legendName[0]);
   }
 }

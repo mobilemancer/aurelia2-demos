@@ -1,4 +1,3 @@
-import { XYZ } from "./xyz";
 import { bindable } from "aurelia";
 
 import { IDroid } from "../../common/IDroid";
@@ -6,8 +5,6 @@ import { IDroid } from "../../common/IDroid";
 export class DroidComponent {
   @bindable public droid: IDroid;
   public imgSource: string;
-
-  constructor(xyz: XYZ) {}
 
   public afterBind() {
     if (!this.droid.model || this.droid.model === "") return "";

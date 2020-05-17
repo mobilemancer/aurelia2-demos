@@ -1,10 +1,5 @@
-import { valueConverter } from "aurelia";
-
-@valueConverter("heightFormater")
-export class HeightFormaterValueConverter {
-  public toview(value: number): string {
-    console.log("formatting...");
-
-    return value + "m";
+export class LengthFormaterValueConverter {
+  public toView(value: number): string {
+    return value === 0 ? "unknown" : value + "m";
   }
 }

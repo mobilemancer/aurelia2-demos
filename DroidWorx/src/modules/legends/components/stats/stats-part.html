@@ -7,24 +7,28 @@
 
   <div class="stats">
     <div class="stat-row">
-      <span class="quantity">Mass</span>
-      <span class="measurement">${calculatedMass}</span>
+      <span class="label">Product Line</span>
+      <span class="value">${legend.productLine}</span>
     </div>
+
     <div class="stat-row">
-      <span class="quantity">Height</span>
-      <span class="measurement">${calculatedHeight}</span>
+      <span class="label">Manufacturer</span>
+      <span class="value">${legend.manufacturer}</span>
     </div>
+
     <div class="stat-row">
-      <span class="quantity">Sensor Color</span>
-      <span class="measurement">${droid.sensorColor}</span>
+      <span class="label">Mass</span>
+      <span class="value">${legend.mass | massFormater}</span>
     </div>
+
     <div class="stat-row">
-      <span class="quantity">Product Line</span>
-      <span class="measurement">${droid.productLine}</span>
+      <span class="label">Height</span>
+      <span class="value">${legend.height | lengthFormater}</span>
     </div>
+
     <div class="stat-row">
-      <span class="quantity">Manufacturer</span>
-      <span class="measurement">${droid.manufacturer}</span>
+      <span class="label">Sensor Color</span>
+      <span class="value">${legend.sensorColor}</span>
     </div>
   </div>
 </div>

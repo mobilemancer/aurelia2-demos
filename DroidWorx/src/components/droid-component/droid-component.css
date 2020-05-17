@@ -27,7 +27,8 @@ article {
 img {
   grid-area: upper-left;
   max-width: 400px;
-  height: 300px;
+  max-height: 300px;
+  margin: auto;
 }
 
 .image-info-card {
@@ -58,6 +59,22 @@ img {
 .specs-card {
   grid-area: 1 / 2 / 3 / 2;
   line-height: 2rem;
+  overflow: auto;
+}
+
+.price {
+  grid-area: lower-right;
+  font-family: var(--font-family--header);
+}
+
+.price img {
+  vertical-align: middle;
+  height: 70px;
+}
+
+.price .amount {
+  margin-top: 14px;
+  font-size: x-large;
 }
 
 /* MOVE?  */

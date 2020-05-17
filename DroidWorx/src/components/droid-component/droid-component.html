@@ -15,15 +15,14 @@
       <div class="sensor-color">Sensor: ${droid.sensorColor}</div>
       <div class="plating-color">Plating: ${droid.platingColor}</div>
       <div class="specs">
-        <b>Height</b> ${droid.height | heightF}
-        <br />
-        <b>Mass</b> ${droid.mass | massFormater}
+        <div><b>Height</b> ${droid.height | lengthFormater}</div>
+        <div><b>Mass</b> ${droid.mass | massFormater}</div>
       </div>
+    </div>
 
-      <div class="price">
-        Price <br />
-        ${droid.price}
-      </div>
+    <div class="price">
+      <img src="../../../content/icons/republic_credit.svg" alt="Credits" />
+      <span class="amount">${droid.price}</span>
     </div>
 
     <!-- <blockquote class="about">${droid.about}</blockquote> -->

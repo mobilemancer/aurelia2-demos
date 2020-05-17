@@ -1,5 +1,5 @@
 export class MassFormaterValueConverter {
-  public toview(value: number): string {
-    return value + "kg";
+  public toView(value: number): string {
+    return value === 0 ? "unknown" : value + "kg";
   }
 }

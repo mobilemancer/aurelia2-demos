@@ -17,6 +17,7 @@
   overflow-y: scroll;
   height: calc(100% - var(--menu-height));
 }
+
 .heading {
   font-family: var(--font-family--header);
   padding: var(--padding-default);
@@ -26,7 +27,7 @@
   border-bottom: 1px solid black;
 }
 
-.quantity {
+.label {
   font-family: var(--font-family--header);
   padding: var(--padding-default);
   border-right: 1px solid black;
@@ -35,7 +36,7 @@
   text-transform: uppercase;
 }
 
-.measurement {
+.value {
   font-family: var(--font-family--header);
   padding: var(--padding-default);
 }

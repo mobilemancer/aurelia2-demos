@@ -1,19 +1,25 @@
-import Aurelia, { RouterConfiguration, StyleConfiguration, Registration } from 'aurelia';
+import Aurelia, { RouterConfiguration, Registration } from "aurelia";
 
-import { DataService } from './services/dataService';
-import { MyApp } from './my-app';
-import * as Modules from './modules/_modules';
-import * as Components from './components/_components';
-import { IDataService } from './common/IDataService';
+import { MyApp } from "./my-app";
 
-Aurelia
-    .register(
-        // StyleConfiguration.cssModulesProcessor(),
-        RouterConfiguration,
-        Modules,
-        Components,
-        Registration.singleton(IDataService, DataService),
+import { DataService } from "./services/dataService";
+import { IDataService } from "./common/IDataService";
 
-    )
-    .app(MyApp)
-    .start();
+import * as Components from "./components/_components";
+import * as Modules from "./modules/_modules";
+import * as ValueConverters from "./value-converters/_valueConverters";
+import { XYZ } from "./components/droid-component/xyz";
+
+Aurelia.register(
+  RouterConfiguration,
+  Registration.singleton(IDataService, DataService),
+
+  Registration.singleton(XYZ, XYZ),
+  XYZ,
+
+  Modules,
+  Components,
+  ValueConverters
+)
+  .app(MyApp)
+  .start();

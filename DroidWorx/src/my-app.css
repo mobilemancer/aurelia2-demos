@@ -4,8 +4,9 @@
   --color--primary-dark-background: #512da8;
   --color--primary-dark-background-highlight: #7351c2;
   --color--primary-dark-foreground: #ffffff;
+  --color--primary-dark-foreground-emphasize: #eeeeee;
   --color--primary-bright-background: #dddddd;
-  --color--primary-bright-foreground: #333333;
+  --color--primary-bright-foreground: #030303;
   --color--primary-bright-foreground-emphasize: #111111;
   --color--primary-bright-foreground-de-emphasize: #888888;
   --color--primary-ok: #15be6f;

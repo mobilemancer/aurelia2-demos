@@ -1,16 +1,31 @@
 <article>
   <div class="droid-component">
-    <div class="heading">${droid.name}</div>
-    <div class="manufacturer">
-      By: ${droid.manufacturer}
+    <img src.bind="imgSource" />
+
+    <div class="image-info-card">
+      <div class="model">${droid.model}</div>
+      <div class="manufacturer">${droid.manufacturer}</div>
     </div>
-    <div class="specs">
-      Specs ${droid.height}m ${droid.mass}kg
+
+    <div class="specs-card">
+      <h2>${droid.class}</h2>
+      <div class="class"></div>
+      <div class="armaments">${droid.armament}</div>
+      <div class="equipment">${droid.equipment}</div>
+      <div class="sensor-color">Sensor: ${droid.sensorColor}</div>
+      <div class="plating-color">Plating: ${droid.platingColor}</div>
+      <div class="specs">
+        <b>Height</b> ${droid.height | heightF}
+        <br />
+        <b>Mass</b> ${droid.mass | massFormater}
+      </div>
+
+      <div class="price">
+        Price <br />
+        ${droid.price}
+      </div>
     </div>
-    <div class="product-line">${droid.productLine}</div>
-    <div class="allegiance">${droid.allegiance}</div>
-    <div class="sensor-color">${droid.sensorColor}</div>
-    <blockquote class="about">${droid.about}</blockquote>
-    <div class="image">${droid.image}</div>
+
+    <!-- <blockquote class="about">${droid.about}</blockquote> -->
   </div>
 </article>

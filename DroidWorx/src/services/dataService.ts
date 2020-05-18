@@ -1,3 +1,4 @@
+import { IFilterProperties } from './../common/IFilterProperties';
 import { IDroid } from "./../common/IDroid";
 import { ILegend } from "../common/ILegend";
 
@@ -23,13 +24,26 @@ export class DataService {
     })[0];
   }
 
-  public filterProducts(fragment: string): IDroid[] {
-    if (!fragment || fragment === "") {
-      this.products;
-    }
-
-    return this.products.filter((d) => {
-      return d.class.includes(fragment);
+  public filterProducts(fragment: string, filterProps: IFilterProperties): IDroid[] {
+    let res = this.filterByText(fragment).filter((d) => {
+      return (
+        (filterProps.arakyd && d.manufacturer.includes("Arakyd"))
+        || (filterProps.automaton && d.manufacturer.includes("Automaton"))
+        || (filterProps.cybot && d.manufacturer.includes("Cybot"))
+      );
     });
+    console.log(res);
+    return res;
   }
+
+  private filterByText(fragment: string): IDroid[] {
+    if (!fragment || fragment === "") {
+      return this.products;
+    } else {
+      return this.products.filter((d) => {
+        d.class.includes(fragment)
+      });
+    }
+  }
+
 }

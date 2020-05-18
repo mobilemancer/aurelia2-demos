@@ -2,11 +2,9 @@
   height: calc(100vh - var(--menu-height));
   overflow: hidden;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 300px auto;
   grid-template-rows: 75% 25%;
-  grid-template-areas:
-    "upper-left upper-right"
-    "lower-left lower-right";
+  grid-template-areas: "upper-left upper-right" "lower-left lower-right";
 }
 
 .products {

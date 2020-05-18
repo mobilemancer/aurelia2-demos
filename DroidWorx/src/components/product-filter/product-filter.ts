@@ -3,22 +3,38 @@ import { bindable } from "aurelia";
 import { DataService } from "./../../services/dataService";
 import { IDataService } from "../../common/IDataService";
 import { IDroid } from "./../../common/IDroid";
+import { IFilterProperties } from "../../common/IFilterProperties";
 
 export class ProductFilter {
-  @bindable public filteredProducts: IDroid[];
+    @bindable public filteredProducts: IDroid[];
 
-  @bindable public searchText: string;
+    @bindable public searchText: string;
 
-  constructor(@IDataService private dataService: DataService) {
-    this.filteredProducts = dataService.filterProducts("");
-  }
+    @bindable public arakyd: boolean;
+    @bindable public cybot: boolean;
+    @bindable public automaton: boolean;
+    private filterProperties: IFilterProperties = { arakyd: true, cybot: true, automaton: true };
 
-  public set searchFilter(val: string) {
-    console.log(val);
-  }
+    constructor(@IDataService private dataService: DataService) {
+        this.filteredProducts = dataService.filterProducts("", this.filterProperties);
+    }
 
-  public searchTextChanged(val) {
-    console.log(this.dataService.filterProducts(val));
-    this.filteredProducts = this.dataService.filterProducts(val);
-  }
+    public searchTextChanged(val: string): void {
+        this.filteredProducts = this.dataService.filterProducts(val, this.filterProperties);
+    }
+
+    public arakydChanged(val) {
+        this.filterProperties.arakyd = val;
+        this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
+    }
+
+    public automatonChanged(val) {
+        this.filterProperties.automaton = val;
+        this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
+    }
+
+    public cybotChanged(val) {
+        this.filterProperties.cybot = val;
+        this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
+    }
 }

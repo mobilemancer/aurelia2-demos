@@ -1,4 +1,4 @@
-# DroidWorx
+# 🤖 DroidWorx
 
 This project is bootstrapped by [aurelia/new](https://github.com/aurelia/new).
 
@@ -27,7 +27,6 @@ By default, browser-do shuts down browser after tests. To keep browser window op
     npm run build:test && browser-do -k --jasmine --browser chrome < dist/entry-bundle.js
 
 Unit tests in watch mode is executed through stand webpack watch mode and the help of [webpack-shell-plugin-next](https://github.com/s00d/webpack-shell-plugin-next).
-
 
 ## Cypress e2e test
 

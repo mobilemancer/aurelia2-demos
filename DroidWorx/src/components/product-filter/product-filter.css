@@ -4,9 +4,10 @@
   background-color: var(--color--primary-dark-background);
   padding: var(--padding-default);
   margin: var(--padding-default);
-  margin-right: calc(3* var(--padding-default));
-  margin-bottom: calc(3* var(--padding-default));
+  margin-right: calc(3 * var(--padding-default));
+  margin-bottom: calc(3 * var(--padding-default));
   box-shadow: 20px 10px black;
+  color: var(--color--primary-dark-foreground);
 }
 
 .searchbox input {
@@ -14,7 +15,7 @@
 }
 
 .options {
-  color: var(--color--primary-dark-foreground);
+  /* color: var(--color--primary-dark-foreground); */
 }
 
 .heading {

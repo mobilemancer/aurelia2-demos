@@ -1,29 +1,46 @@
 <div class="product-filter">
-    <div class="searchbox">
-        <input type="text" value.two-way="searchText">
+  <div class="searchbox">
+    <label class="heading" for="searchFilter">Search</label>
+    <input type="text" value.two-way="searchText" id="searchFilter" />
+  </div>
+
+  <div class="options">
+    <div class="manufacturers">
+      <div class="heading">
+        Manufacturers
+      </div>
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          name="Arakyd Industries"
+          id="arakyd"
+          checked.bind="arakyd"
+          checked
+        />
+        <label for="arakyd">Arakyd Industries</label>
+      </div>
+
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          name="Cybot Galactica"
+          id="cybot"
+          checked.bind="cybot"
+          checked
+        />
+        <label for="cybot">Cybot Galactica</label>
+      </div>
+
+      <div class="checkbox">
+        <input
+          type="checkbox"
+          name="Industrial Automaton"
+          id="automaton"
+          checked.bind="automaton"
+          checked
+        />
+        <label for="automaton">Industrial Automaton</label>
+      </div>
     </div>
-    ${searchText}
-
-    <div class="options">
-        <div class="manufacturers">
-            <div class="heading">
-                Manufacturers
-            </div>
-            <div class="checkbox">
-                <input type="checkbox" name="Arakyd Industries" id="arakyd" checked.bind="arakyd" checked>
-                <label for="arakyd">Arakyd Industries</label>
-            </div>
-
-            <div class="checkbox">
-                <input type="checkbox" name="Cybot Galactica" id="cybot" checked.bind="cybot" checked>
-                <label for="cybot">Cybot Galactica</label>
-            </div>
-
-            <div class="checkbox">
-                <input type="checkbox" name="Industrial Automaton" id="automaton" checked.bind="automaton" checked>
-                <label for="automaton">Industrial Automaton</label>
-            </div>
-        </div>
-    </div>
-
+  </div>
 </div>

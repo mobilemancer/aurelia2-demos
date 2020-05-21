@@ -5,9 +5,9 @@ import { MyApp } from "./my-app";
 import { DataService } from "./services/dataService";
 import { IDataService } from "./common/IDataService";
 
-import * as Components from "./components/_components";
-import * as Modules from "./modules/_modules";
-import * as ValueConverters from "./value-converters/_valueConverters";
+import * as Components from "./components/globalComponents";
+import * as Modules from "./modules/globalModules";
+import * as ValueConverters from "./value-converters/globalValueConverters";
 
 Aurelia.register(
   RouterConfiguration,

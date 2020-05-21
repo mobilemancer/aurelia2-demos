@@ -35,7 +35,6 @@ export class DataService {
         (filterProps.cybot && d.manufacturer.includes("Cybot"))
       );
     });
-    console.log(res);
     return res;
   }
 

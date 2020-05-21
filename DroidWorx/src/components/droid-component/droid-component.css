@@ -20,7 +20,7 @@ article {
 }
 
 img {
-  grid-area: upper-left;
+  grid-area: upper-left / 1 / mid-left;
   max-width: 400px;
   max-height: 300px;
   margin: auto;
@@ -28,6 +28,9 @@ img {
 
 .image-info-card {
   grid-area: lower-left;
+  /* display: flex; 
+  /* margin-left: right;*/
+  margin-top: auto;
   font-family: var(--font-family--header);
 }
 
@@ -59,6 +62,9 @@ img {
 
 .price {
   grid-area: lower-right;
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
   font-family: var(--font-family--header);
 }
 

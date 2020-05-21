@@ -9,9 +9,20 @@
 
     <div class="specs-card">
       <h2>${droid.class}</h2>
-      <div class="class"></div>
-      <div class="armaments">${droid.armament}</div>
-      <div class="equipment">${droid.equipment}</div>
+      <div
+        if.bind="droid.armament.length > 0"
+        class="armaments"
+        title.bind="droid.armament"
+      >
+        Armaments <b>(${droid.armament.length})</b>
+      </div>
+      <div
+        if.bind="droid.equipment.length > 0"
+        class="equipment"
+        title.bind="droid.equipment"
+      >
+        Equipment <b>(${droid.equipment.length})</b>
+      </div>
       <div class="sensor-color">Sensor: ${droid.sensorColor}</div>
       <div class="plating-color">Plating: ${droid.platingColor}</div>
       <div class="specs">

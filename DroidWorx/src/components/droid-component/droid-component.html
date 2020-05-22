@@ -23,8 +23,14 @@
       >
         Equipment <b>(${droid.equipment.length})</b>
       </div>
-      <div class="sensor-color">Sensor: ${droid.sensorColor}</div>
-      <div class="plating-color">Plating: ${droid.platingColor}</div>
+      <div if.bind="droid.sensorColor.length>0" class="sensor-color">
+        Sensor color
+        <color-display colors.bind="droid.sensorColor"></color-display>
+      </div>
+      <div class="plating-color">
+        Plating color
+        <color-display colors.bind="droid.platingColor"></color-display>
+      </div>
       <div class="specs">
         <div><b>Height</b> ${droid.height | lengthFormater}</div>
         <div><b>Mass</b> ${droid.mass | massFormater}</div>

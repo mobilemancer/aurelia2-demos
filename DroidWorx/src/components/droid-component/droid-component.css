@@ -13,13 +13,13 @@ article {
   height: calc(100% - 3 * var(--padding-default));
   padding: calc(2 * var(--padding-default));
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 55% 45%;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "upper-left upper-right" "mid-left mid-right" "lower-left lower-right";
   box-shadow: 20px 10px black;
 }
 
-img {
+.droid-component img {
   grid-area: upper-left / 1 / mid-left;
   max-width: 400px;
   max-height: 300px;
@@ -28,8 +28,6 @@ img {
 
 .image-info-card {
   grid-area: lower-left;
-  /* display: flex; 
-  /* margin-left: right;*/
   margin-top: auto;
   font-family: var(--font-family--header);
 }

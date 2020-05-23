@@ -1,10 +1,8 @@
-/* {} [] */
 nav {
-  height: var(--menu-height);
-  background-color: var(--color--primary-dark-background);
-  color: var(--color--primary-dark-foreground);
+  height: 100%;
   font-family: var(--font-family--header);
   text-transform: uppercase;
+  display: inline-block;
 }
 
 nav a {
@@ -12,4 +10,16 @@ nav a {
   display: inline-block;
   padding: var(--padding-default);
   text-decoration: none;
+}
+
+.cart {
+  float: right;
+  height: 100%;
+}
+
+.cart img {
+  display: inline-block;
+  height: calc(100% - 2 * var(--padding-small));
+  padding: var(--padding-small);
+  padding-right: var(--padding-default);
 }

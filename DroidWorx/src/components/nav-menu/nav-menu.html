@@ -1,6 +1,14 @@
 <nav>
-  <a goto="home-page">Home</a>
-  <a goto="products-page">Products</a>
-  <a goto="legends-page">Legends</a>
-  <a goto="about-page">About</a>
+  <a goto="home-page@main-viewport">Home</a>
+  <a goto="products-page@main-viewport">Products</a>
+  <a goto="legends-page@main-viewport">Legends</a>
+  <a goto="about-page@main-viewport">About</a>
 </nav>
+
+<div class="cart">
+  <img
+    src="../content/icons/shopping_cart.svg"
+    alt="Shopping Cart"
+    click.trigger="toggleShoppingCart()"
+  />
+</div>

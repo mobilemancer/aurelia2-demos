@@ -1,0 +1,13 @@
+<div class="shopping-cart">
+  <div class="header">
+    <div class="product">Product</div>
+    <div class="quantity">Quantity</div>
+    <div class="price">Price</div>
+  </div>
+
+  <div class="item-row" repeat.for="item of cart">
+    <span>img</span>
+    <span>${item.productName}</span>
+    <span>+ ${item.qty} -</span>
+  </div>
+</div>

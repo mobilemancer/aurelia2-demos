@@ -1,0 +1,10 @@
+.shopping-cart {
+  padding: var(--padding-default);
+  display: grid;
+}
+
+.item-row {
+  vertical-align: center;
+  border-bottom: 1px solid green;
+  padding: var(--padding-small);
+}

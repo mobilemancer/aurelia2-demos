@@ -1,6 +1,10 @@
 :root {
   --menu-height: 56px;
+  --cart-width: 300px;
+  --cart-hidden-offset: -400px;
+  --cart-height: 300px;
   --padding-default: 16px;
+  --padding-small: 8px;
   --color--primary-dark-background: #512da8;
   --color--primary-dark-background-highlight: #7351c2;
   --color--primary-dark-foreground: #ffffff;
@@ -47,6 +51,7 @@ body {
   line-height: 1.4em;
   background-color: var(--color--primary-bright-background);
   letter-spacing: 0.01rem;
+  overflow: hidden;
 }
 
 h1,
@@ -56,6 +61,29 @@ h4,
 h5,
 h6 {
   font-family: var(--font-family--header);
+}
+
+.top-bar {
+  height: var(--menu-height);
+  background-color: var(--color--primary-dark-background);
+  color: var(--color--primary-dark-foreground);
+}
+
+:global .cart {
+  position: absolute;
+  background-color: aliceblue;
+  border: 5px solid green;
+  width: var(--cart-width);
+  height: var(--cart-height);
+  transition: right 0.2s linear;
+}
+
+:global .cart-open {
+  right: 0px;
+}
+
+:global .cart-closed {
+  right: var(--cart-hidden-offset);
 }
 
 :global #full-page {

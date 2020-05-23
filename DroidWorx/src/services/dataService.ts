@@ -1,3 +1,4 @@
+import { IProductRecommendation } from "./../common/IProductRecommendation";
 import { IFilterProperties } from "./../common/IFilterProperties";
 import { IDroid } from "./../common/IDroid";
 import { ILegend } from "../common/ILegend";
@@ -9,7 +10,7 @@ import productRecommendations from "../../data/product-recommendations.json";
 export class DataService {
   public legends: ILegend[] = [];
   public products: IDroid[] = [];
-  public productRecommendations: any[] = [];
+  private productRecommendations: any[] = [];
 
   constructor() {
     this.legends = legends;
@@ -39,6 +40,17 @@ export class DataService {
       );
     });
     return res;
+  }
+
+  public getRecommendations(amount: number): IProductRecommendation[] {
+    const results = [];
+    do {
+      const item = this.productRecommendations[
+        Math.floor(Math.random() * this.productRecommendations.length)
+      ];
+      if (results.indexOf(item) < 0) results.push(item);
+    } while (results.length < amount);
+    return results;
   }
 
   private filterByText(fragment: string): IDroid[] {

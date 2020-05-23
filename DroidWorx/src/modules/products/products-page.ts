@@ -8,7 +8,7 @@ export class ProductsPage {
   @bindable public filteredProducts: IDroid[] = [];
   public productRecommendations = [];
 
-  constructor(@IDataService private dataService: DataService) {
-    this.productRecommendations = dataService.productRecommendations;
+  constructor(@IDataService dataService: DataService) {
+    this.productRecommendations = dataService.getRecommendations(4);
   }
 }

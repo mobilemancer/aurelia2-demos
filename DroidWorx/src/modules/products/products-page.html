@@ -9,5 +9,10 @@
     </div>
   </div>
 
-  <div class="recomendations">Recom</div>
+  <div class="recommendations">
+    <product-recommendation
+      repeat.for="item of productRecommendations"
+      item.bind="item"
+    ></product-recommendation>
+  </div>
 </div>

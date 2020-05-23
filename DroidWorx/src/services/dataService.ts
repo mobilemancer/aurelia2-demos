@@ -4,14 +4,17 @@ import { ILegend } from "../common/ILegend";
 
 import legends from "../../data/legends.json";
 import products from "../../data/products.json";
+import productRecommendations from "../../data/product-recommendations.json";
 
 export class DataService {
   public legends: ILegend[] = [];
   public products: IDroid[] = [];
+  public productRecommendations: any[] = [];
 
   constructor() {
     this.legends = legends;
     this.products = products;
+    this.productRecommendations = productRecommendations;
   }
 
   public getLegend(name: string): ILegend {

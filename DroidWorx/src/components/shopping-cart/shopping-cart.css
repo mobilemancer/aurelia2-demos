@@ -49,6 +49,7 @@
 .product-img {
   grid-area: img;
   padding: 10px;
+  cursor: pointer;
 }
 
 .product-img img {
@@ -60,6 +61,7 @@
   grid-area: product;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .quantity {

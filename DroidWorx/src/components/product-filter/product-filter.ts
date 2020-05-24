@@ -1,4 +1,9 @@
-import { bindable, IEventAggregator, EventAggregator } from "aurelia";
+import {
+  bindable,
+  IEventAggregator,
+  EventAggregator,
+  IDisposable,
+} from "aurelia";
 
 import { DataService } from "./../../services/dataService";
 import { IDataService } from "../../common/IDataService";
@@ -18,6 +23,7 @@ export class ProductFilter {
     cybot: true,
     automaton: true,
   };
+  private eventListeners: IDisposable[] = [];
 
   constructor(
     @IDataService private dataService: DataService,
@@ -28,9 +34,15 @@ export class ProductFilter {
       this.filterProperties
     );
 
-    eventAggregator.subscribe("filter", (model: string) => {
-      this.searchText = model;
-    });
+    this.eventListeners.push(
+      eventAggregator.subscribe("filter", (model: string) => {
+        this.searchText = model;
+      })
+    );
+  }
+
+  public afterUnbind() {
+    this.eventListeners.forEach((el) => el.dispose());
   }
 
   public searchTextChanged(val: string): void {

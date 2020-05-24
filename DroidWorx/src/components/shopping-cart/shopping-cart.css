@@ -1,10 +1,25 @@
 .shopping-cart {
   padding: var(--padding-default);
   display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-auto-flow: row;
+  grid-template-areas: "product quantity price";
 }
 
 .item-row {
   vertical-align: center;
   border-bottom: 1px solid green;
   padding: var(--padding-small);
+}
+
+.product {
+  grid-area: product;
+}
+
+.quantity {
+  grid-area: quantity;
+}
+
+.price {
+  grid-area: price;
 }

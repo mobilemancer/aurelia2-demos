@@ -1,8 +1,8 @@
 :root {
   --menu-height: 56px;
-  --cart-width: 300px;
-  --cart-hidden-offset: -400px;
-  --cart-height: 300px;
+  --cart-width: 500px;
+  --cart-hidden-offset: -540px;
+  --cart-height: 500px;
   --padding-default: 16px;
   --padding-small: 8px;
   --color--primary-dark-background: #512da8;

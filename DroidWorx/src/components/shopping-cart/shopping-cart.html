@@ -1,11 +1,37 @@
-<div class="shopping-cart">
-  <div class="product">Product</div>
-  <div class="quantity">Quantity</div>
-  <div class="price">Price</div>
+<div if.bind="cart.length === 0" class="empty-cart">
+  <div class="cart-text">
+    Cart is empty<br /><br />
+    <b>BUY</b> and make robot happy!
+  </div>
+  <img src="../../../content/images/sad_robot.jpg" alt="nothing in cart" />
+</div>
 
-  <div repeat.for="item of cart">
-    <div class="product">img</div>
-    <div class="quantity">${item.productName}</div>
-    <div class="price">+ ${item.qty} -</div>
+<div if.bind="cart.length > 0" class="shopping-cart">
+  <div class="header">
+    <div></div>
+    <div>Product</div>
+    <div>Quantity</div>
+    <div>Price</div>
+  </div>
+
+  <div class="item-list">
+    <div class="cart-content" repeat.for="item of cart">
+      <div class="product-img">
+        <img src.bind="item.imgSource" alt="" />
+      </div>
+
+      <div class="product">${item.productName}</div>
+
+      <div class="quantity">
+        <input type="number" min="1" value.bind="item.qty" change.trigger="calculateTotalPrice()"></input>
+      </div>
+
+      <div class="price">${item.price}</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="total">Total</div>
+    <div class="total-price">${totalPrice}</div>
   </div>
 </div>

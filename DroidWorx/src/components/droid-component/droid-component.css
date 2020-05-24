@@ -64,6 +64,12 @@ article {
   margin-left: auto;
   margin-top: auto;
   font-family: var(--font-family--header);
+  flex-direction: column;
+}
+
+.price button {
+  margin-bottom: var(--padding-default);
+  color: green;
 }
 
 .price img {

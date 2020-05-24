@@ -16,11 +16,11 @@
 
   <div class="item-list">
     <div class="cart-content" repeat.for="item of cart">
-      <div class="product-img">
+      <div class="product-img" click.trigger="filterProduct(item.productName)">
         <img src.bind="item.imgSource" alt="" />
       </div>
 
-      <div class="product">${item.productName}</div>
+      <div class="product" click.trigger="filterProduct(item.productName)">${item.productName}</div>
 
       <div class="quantity">
         <input type="number" min="1" value.bind="item.qty" change.trigger="calculateTotalPrice()"></input>

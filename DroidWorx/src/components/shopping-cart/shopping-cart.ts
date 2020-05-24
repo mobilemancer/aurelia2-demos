@@ -9,7 +9,7 @@ export class ShoppingCart {
   }[] = [];
   public totalPrice: number = 0;
 
-  constructor(@IEventAggregator eventAggregator: EventAggregator) {
+  constructor(@IEventAggregator private eventAggregator: EventAggregator) {
     eventAggregator.subscribe("add-item", (product: any) => {
       let prod = this.cart.filter((p) => p.productName === product.model);
       debugger;
@@ -34,6 +34,10 @@ export class ShoppingCart {
       total = total + p.qty * p.price;
     });
     this.totalPrice = total;
+  }
+
+  public filterProduct(model: string) {
+    this.eventAggregator.publish("filter", model);
   }
 
   private getImageLink(product: string): string {

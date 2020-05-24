@@ -1,4 +1,7 @@
-<div class="product-recommendation">
+<div
+  class="product-recommendation"
+  click.trigger="filterProduct(item.productName)"
+>
   <img src.bind="imgSource" alt.bind="item.productName" />
   <div class="product-name">${item.productName}</div>
   <blockquote>

@@ -1,0 +1,38 @@
+.home-page {
+  padding: 5rem 8rem;
+}
+
+.home-page .header {
+  font-family: var(--font-family--header);
+  font-size: 5rem;
+  line-height: 5rem;
+  margin: 10rem 0rem 3rem 0rem;
+  display: flex;
+  text-align: center;
+}
+
+.home-page-article {
+  font-family: var(--font-family--normal);
+  font-size: large;
+  vertical-align: text-bottom;
+}
+
+.home-page img {
+  max-width: 200px;
+}
+
+.home-page .visitors {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+
+  color: var(--color--primary-bright-foreground);
+  background-color: var(--color--primary-dark-foreground);
+  box-shadow: 10px 5px black;
+  padding: calc(var(--padding-default) / 2) var(--padding-default);
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 5px;
+  font-family: var(--font-family--header);
+  z-index: 100;
+}

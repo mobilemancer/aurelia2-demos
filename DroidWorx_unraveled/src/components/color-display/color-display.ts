@@ -2,7 +2,6 @@ import { bindable } from "aurelia";
 
 export class ColorDisplay {
   @bindable public colors: string[];
-  @bindable public form: "circle" | "box" = "circle";
   public computedColors: { text: string; style: string }[] = [];
 
   public afterBind() {

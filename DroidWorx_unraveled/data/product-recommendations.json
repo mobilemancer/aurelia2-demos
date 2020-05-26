@@ -1,22 +1,22 @@
 [
   {
     "productName": "Viper Probe",
-    "user": "Lord Vader",
-    "quote": "Give me 5000 hyperspace pods with Vipers in them and I'll show you some rebels. Eventually..."
+    "quote": "Give me 5000 hyperspace pods with Vipers in them and I'll show you some rebels. Eventually...",
+    "user": "Lord Vader"
   },
   {
     "productName": "R2",
-    "user": "seethreeepIO",
-    "quote": "Good droid. Don't let them play Dejarik with wookies!"
+    "quote": "Good droid. Don't let them play Dejarik with wookies!",
+    "user": "seethreeepIO"
   },
   {
     "productName": "RA-7",
-    "user": "SholhD62",
-    "quote": "Best investment, ever!"
+    "quote": "Best investment, ever!",
+    "user": "SholhD62"
   },
   {
     "productName": "R5",
-    "user": "arrToo",
-    "quote": "Contrary to popular belief, they have great motivators."
+    "quote": "Contrary to popular belief, they have great motivators.",
+    "user": "arrToo"
   }
 ]

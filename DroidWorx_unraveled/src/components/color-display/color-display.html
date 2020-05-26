@@ -1,16 +1,7 @@
-<div class="color-display">
+<div>
   <div
-    if.bind="form === 'circle'"
     repeat.for="color of computedColors"
     class="color-circle"
-    title.bind="color.text"
-    style.bind="color.style"
-  ></div>
-
-  <div
-    if.bind="form === 'square'"
-    repeat.for="color of computedColors"
-    class="color-box"
     title.bind="color.text"
     style.bind="color.style"
   ></div>

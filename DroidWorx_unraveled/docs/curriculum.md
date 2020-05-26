@@ -20,9 +20,10 @@ Aurelia's reactive databinding is at the same time simple and very powerfull.
 
 ### Assignment: Add flair to the home page
 
-The customer wants a visitor counter to be displayed on the [home page](./../src/modules/home/home-page.html) !
+1. The customer wants a visitor counter to be displayed on the [home page](./../src/modules/home/home-page.html) !
+2. The customer wants to alternate the image between BB-8 and BB-9E for odd and even visitor count.
 
-The data is already accessible in the [view model](./../src/modules/home/home-page.ts) in the property `visitors`.
+The data is accessible in the [view model](./../src/modules/home/home-page.ts).
 
 <details>
 <summary>Task 1</summary>
@@ -31,6 +32,30 @@ The data is already accessible in the [view model](./../src/modules/home/home-pa
 <div class="visitors">
   Visitors: ${visitors}
 </div>
+```
+
+</details>
+
+<details>
+<summary>Task 2</summary>
+
+Data bind the src of the img.
+
+```html
+<img src.bind="imgSource" />
+```
+
+Add the imgSource property and assign it an image path.
+
+```typescript
+  public imgSource = "";
+  constructor() {
+    if (this.visitors % 2 === 0) {
+      this.imgSource = this.bb8Media;
+    } else {
+      this.imgSource = this.bb9eMedia;
+    }
+  }
 ```
 
 </details>

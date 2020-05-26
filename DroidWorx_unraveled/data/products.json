@@ -1,0 +1,136 @@
+[
+  {
+    "armament": [],
+    "class": "Analysis Droid",
+    "equipment": ["Repulsorlift", "Sensor apparatus"],
+    "height": 1,
+    "manufacturer": "Cybot Galactica",
+    "model": "JN-66",
+    "platingColor": ["silver", "gold"],
+    "price": 2700,
+    "sensorColor": ["blue", "green"]
+  },
+  {
+    "armament": [],
+    "class": "Analysis Droid",
+    "equipment": ["*Repulsorlift", "Vocoder"],
+    "height": 1.46,
+    "manufacturer": "Cybot Galactica",
+    "model": "SP-4",
+    "platingColor": ["silver", "gold"],
+    "price": 1750,
+    "sensorColor": ["blue", "green"]
+  },
+  {
+    "armament": [],
+    "class": "Labor Droid",
+    "equipment": [],
+    "height": 1.46,
+    "manufacturer": "Cybot Galactica",
+    "model": "PK-4",
+    "platingColor": ["silver", "gold"],
+    "price": 1000,
+    "sensorColor": ["blue"]
+  },
+  {
+    "armament": [],
+    "class": "Astromech Droid",
+    "equipment": [
+      "Acoustic signaler",
+      "Fire extinguisher",
+      "Holographic projector/recorder",
+      "Repair arms",
+      "Retractable heavy grasper",
+      "Small circular saw"
+    ],
+    "height": 0.97,
+    "manufacturer": "Industrial Automaton",
+    "model": "R5",
+    "platingColor": ["white & red", "black & bronze"],
+    "price": 6100,
+    "sensorColor": []
+  },
+  {
+    "armament": [],
+    "class": "Astromech Droid",
+    "equipment": [
+      "Fire extinguisher",
+      "Heat exhaust",
+      "Holographic projector/recorder",
+      "Magnetic fault sensor",
+      "Motorized leg",
+      "Power recharge coupler",
+      "Powerbus cable",
+      "Repair arms",
+      "Small circular saw"
+    ],
+    "height": 1.09,
+    "manufacturer": "Industrial Automaton",
+    "model": "R2",
+    "platingColor": ["white & blue", "black & bronze"],
+    "price": 8000,
+    "sensorColor": []
+  },
+  {
+    "armament": [],
+    "class": "Astromech Droid",
+    "equipment": [
+      "Comlink",
+      "Diagnostics package",
+      "Environmental compensator (vacuum)",
+      "Fire extinguisher",
+      "Heuristic processor",
+      "Internal storage (2 kg)",
+      "Locked access",
+      "Magnetic feet",
+      "Holographic unit",
+      "Rust inhibitor",
+      "Tool mount x4",
+      "Tool kit",
+      "Welding laser/cutting torch"
+    ],
+    "height": 1,
+    "manufacturer": "Industrial Automaton",
+    "model": "R8",
+    "platingColor": ["white & black"],
+    "price": 8000,
+    "sensorColor": []
+  },
+  {
+    "armament": ["Blaster", "Self-destruct mechanism"],
+    "class": "Probe Droid",
+    "equipment": ["Communicator", "Manipulator arms", "Repulsorlift"],
+    "height": 1.83,
+    "manufacturer": "Arakyd Industries",
+    "model": "Viper Probe",
+    "platingColor": ["black"],
+    "price": 17000,
+    "sensorColor": ["red"]
+  },
+  {
+    "armament": [],
+    "class": "Protocol Droid",
+    "equipment": ["TranLang III communication module"],
+    "height": 1.7,
+    "manufacturer": "Cybot Galactica",
+    "model": "3PO",
+    "platingColor": ["silver", "gold"],
+    "price": 8000,
+    "sensorColor": ["yellow"]
+  },
+  {
+    "armament": [],
+    "class": "Protocol Droid",
+    "equipment": [
+      "TranLang III communication module",
+      "Broadband photoreceptors with antiglare coating",
+      "Interface connection port"
+    ],
+    "height": 1.7,
+    "manufacturer": "Arakyd Industries",
+    "model": "RA-7",
+    "platingColor": ["silver", "gold"],
+    "price": 7400,
+    "sensorColor": ["yellow"]
+  }
+]

@@ -1,7 +1,7 @@
 .product-recommendation {
   display: flex;
   flex-direction: row;
-  min-width: calc(100vw / 4 - 2 * var(--padding-default));
+  width: 415px;
   padding: var(--padding-default);
   cursor: pointer;
 }

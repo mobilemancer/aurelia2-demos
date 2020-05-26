@@ -1,0 +1,18 @@
+<div class="container">
+  <product-filter
+    filtered-products.from-view="filteredProducts"
+  ></product-filter>
+
+  <div class="products">
+    <div repeat.for="product of filteredProducts">
+      <droid-component droid.bind="product"></droid-component>
+    </div>
+  </div>
+
+  <div class="recommendations">
+    <product-recommendation
+      repeat.for="recommendation of productRecommendations"
+      item.bind="recommendation"
+    ></product-recommendation>
+  </div>
+</div>

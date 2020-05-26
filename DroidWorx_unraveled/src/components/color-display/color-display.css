@@ -1,0 +1,11 @@
+.color-box {
+  display: inline-block;
+}
+
+.color-circle {
+  display: inline-block;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: var(--padding-default);
+}

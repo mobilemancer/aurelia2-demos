@@ -1,0 +1,52 @@
+<article>
+  <div class="droid-component">
+    <img src.bind="imgSource" />
+
+    <div class="image-info-card">
+      <div class="model">${droid.model}</div>
+      <div class="manufacturer">${droid.manufacturer}</div>
+    </div>
+
+    <div class="specs-card">
+      <h2>${droid.class}</h2>
+      <div
+        if.bind="droid.armament.length > 0"
+        class="armaments"
+        title.bind="droid.armament"
+      >
+        Armaments <b>(${droid.armament.length})</b>
+      </div>
+      <div
+        if.bind="droid.equipment.length > 0"
+        class="equipment"
+        title.bind="droid.equipment"
+      >
+        Equipment <b>(${droid.equipment.length})</b>
+      </div>
+      <div if.bind="droid.sensorColor.length>0" class="sensor-color">
+        Sensor color
+        <color-display colors.bind="droid.sensorColor"></color-display>
+      </div>
+      <div class="plating-color">
+        Plating color
+        <color-display colors.bind="droid.platingColor"></color-display>
+      </div>
+      <div class="specs">
+        <div><b>Height</b> ${droid.height | lengthFormater}</div>
+        <div><b>Mass</b> ${droid.mass | massFormater}</div>
+      </div>
+    </div>
+
+    <div class="price">
+      <div>
+        <button click.trigger="addToCart()">Add to Cart!</button>
+      </div>
+      <div>
+        <img src="../../../content/icons/republic_credit.svg" alt="Credits" />
+        <span class="amount">${droid.price}</span>
+      </div>
+    </div>
+
+    <!-- <blockquote class="about">${droid.about}</blockquote> -->
+  </div>
+</article>

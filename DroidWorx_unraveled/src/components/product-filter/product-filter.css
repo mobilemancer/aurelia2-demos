@@ -1,0 +1,28 @@
+.product-filter {
+  width: calc(100% - 6 * var(--padding-default));
+  height: calc(100% - 6 * var(--padding-default));
+  background-color: var(--color--primary-dark-background);
+  padding: var(--padding-default);
+  margin: var(--padding-default);
+  margin-right: calc(3 * var(--padding-default));
+  margin-bottom: calc(3 * var(--padding-default));
+  box-shadow: 20px 10px black;
+  color: var(--color--primary-dark-foreground);
+}
+
+.searchbox input {
+  width: 100%;
+}
+
+.options {
+  /* color: var(--color--primary-dark-foreground); */
+}
+
+.heading {
+  margin-top: var(--padding-default);
+  font-family: var(--font-family--header);
+}
+
+.checkbox {
+  margin: var(--padding-default);
+}

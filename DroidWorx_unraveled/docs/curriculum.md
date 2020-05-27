@@ -116,10 +116,10 @@ The new router is able to handle routing with and without route configurations. 
 
 The customer wants us to finish the [Legends page](./../src/modules/legends/legends-page.html)
 
+#### Tasks
+
 1. Create a list of links for all legendary droids.
 2. Display the `image-part` component in the `image-viewport` and the `stats-part` in the `stats-viewport`.
-
-#### Tasks
 
 <details>
 <summary>Task 1</summary>
@@ -146,6 +146,25 @@ goto="image-part(${droid.name})@image-viewport+stats-part(${droid.name})@stats-v
 ## Independent ViewPorts
 
 The possibility of independent navigation in different viewports and the ease of populating multiple viewports without config changes how we approach routing. This ease of use and flexibility enables us to start thinking of viewports not just as big canvases to draw pages on, but more as independent design elements.
+
+#### Tasks
+
+1. Add another viewport that can be used for the [shopping-cart](./../src\components\shopping-cart\shopping-cart.html) component. (Should be added in the root app ie. [my-app.html](./../src/my-app.html))
+
+<details>
+<summary>Task 1</summary>
+
+```html
+<au-viewport
+  default="shopping-cart"
+  used-by="shopping-cart"
+  no-link
+></au-viewport>
+```
+
+</details>
+
+Obs! Note how routing through modules and pages are separate from the viewport routing the shopping basket.
 
 ## Value Converters
 

@@ -1,22 +1,20 @@
 # Doop's Droid Emporium
 
-## Creating a new Aurelia 2 project
-
-The easiest way is to use npx and run
-
-`npx au2 new`
-
-This will help scaffold a new project, setting up preffered project structure, using TypeScript or JavaScript. Additional choise of CSS preprocessors, testign frameworks etc.
-
 ## Startup main.ts & Dependency Injection
 
 The entry point for the entire project is `main.ts`. This is a good place to register things in the DI container.
 
 [main.ts](./../src/main.ts)
 
+### Global Registrations
+
+To not be forced to import/require components in views all the time, globaly registering components can be a good alternative.
+
+For ex see [globalComponents.ts](./../src/components/globalComponents.ts), here all components are exported and then imported into the DI container in [main.ts](./../src/main.ts).
+
 ## Data Binding
 
-Aurelia's reactive databinding is at the same time simple and very powerfull.
+Aurelia's reactive databinding is very powerfull and at the same time simple to use.
 
 ### Assignment: Add flair to the home page
 
@@ -60,16 +58,18 @@ Add the imgSource property and assign it an image path.
 
 </details>
 
-## Custom Components
+## Components
 
 Components are the main building blocks of Aurelia apps.
 
 ### Assignment: Build the `product-recommendations` component
 
-We have been given a feed of product recomendations. The customer needs:
+We have been given a feed of product recomendations.
 
-1. the recomendations to be displayed below the products, on the [products page](./../src/modules/products/products-page.html)
-2. clicking a recommended product shall filter out the recommended product model
+#### Tasks
+
+1. Create recomendations to be displayed below the products, on the [products page](./../src/modules/products/products-page.html)
+2. Clicking a recommended product shall filter out the recommended product model
 
 The product feed [data structure](./../data/product-recommendations.json)
 
@@ -79,13 +79,13 @@ Start the work in [product-recommendation](./../src\components\product-recommend
 <summary>Task 1</summary>
 
 ```html
-<img src.bind="imgSource" alt.bind="item.productName" />
+<img src.bind="imgSource" />
 
 <div class="product-name">${item.productName}</div>
 
 <blockquote>
   ${item.quote}
-  <div class="user-name">- <em>${item.user}</em></div>
+  <div class="user">- <em>${item.user}</em></div>
 </blockquote>
 ```
 
@@ -100,10 +100,6 @@ click.trigger = "filterProduct(item.productName)";
 
 </details>
 
-## Global Registrations
-
-To not be forced to import/require components in views all the time, globaly registering components can be a good alternative.
-
 ## Template Repeaters
 
 for.of
@@ -114,11 +110,42 @@ if.bind
 
 ## Router
 
-The new router is able to handle routing without route configurations.
+The new router is able to handle routing with and without route configurations. Using routing without a config makes it very easy to populate a multitude of viewports on the screen that can navigate independetly of each other. Populating multiple viewports from the same string is done with `+`.
+
+### Assignment: Build the `Legends` page
+
+The customer wants us to finish the [Legends page](./../src/modules/legends/legends-page.html)
+
+1. Create a list of links for all legendary droids.
+2. Display the `image-part` component in the `image-viewport` and the `stats-part` in the `stats-viewport`.
+
+#### Tasks
+
+<details>
+<summary>Task 1</summary>
+
+```html
+<div class="legend" repeat.for="legend of legends">
+  <a>
+    <h1>${legend.name}</h1>
+  </a>
+</div>
+```
+
+</details>
+
+<details>
+<summary>Task 2</summary>
+
+```html
+goto="image-part(${droid.name})@image-viewport+stats-part(${droid.name})@stats-viewport"
+```
+
+</details>
 
 ## Independent ViewPorts
 
-The possibility of independent navigation in different viewports enables us to start using routing and viewports as design elements.
+The possibility of independent navigation in different viewports and the ease of populating multiple viewports without config changes how we approach routing. This ease of use and flexibility enables us to start thinking of viewports not just as big canvases to draw pages on, but more as independent design elements.
 
 ## Value Converters
 

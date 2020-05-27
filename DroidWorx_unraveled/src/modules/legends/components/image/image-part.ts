@@ -6,9 +6,9 @@ export class ImagePart {
 
   constructor(@IDataService private dataService: DataService) {}
 
-  public enter(droidName: object) {
-    if (!droidName || !droidName[0]) return false;
-    const legend = this.dataService.getLegend(droidName[0]);
+  public enter(legendName: object) {
+    if (!legendName || !legendName[0]) return false;
+    const legend = this.dataService.getLegend(legendName[0]);
     this.source = "./../../../../../content/images/legends/" + legend.image;
   }
 }

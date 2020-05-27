@@ -15,7 +15,6 @@ export class ShoppingCart {
     this.eventListeners.push(
       eventAggregator.subscribe("add-item", (product: any) => {
         let prod = this.cart.filter((p) => p.productName === product.model);
-        debugger;
         if (prod.length === 0) {
           this.cart.push({
             productName: product.model,

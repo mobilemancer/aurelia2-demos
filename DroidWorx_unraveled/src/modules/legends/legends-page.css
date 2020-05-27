@@ -20,7 +20,7 @@
   grid-area: left;
 }
 
-.legend-item {
+.legend {
   margin: calc(4 * var(--padding-default));
 }
 

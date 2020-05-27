@@ -48,7 +48,7 @@ blockquote:before {
   top: 20px;
 }
 
-.user-name {
+.user {
   float: right;
   margin-top: var(--padding-default);
 }

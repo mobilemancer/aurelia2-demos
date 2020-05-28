@@ -43,19 +43,6 @@ Data bind the src of the img.
 <img src.bind="imgSource" />
 ```
 
-Add the imgSource property and assign it an image path.
-
-```typescript
-  public imgSource = "";
-  constructor() {
-    if (this.visitors % 2 === 0) {
-      this.imgSource = this.bb8Media;
-    } else {
-      this.imgSource = this.bb9eMedia;
-    }
-  }
-```
-
 </details>
 
 ## Components
@@ -138,7 +125,7 @@ The customer wants us to finish the [Legends page](./../src/modules/legends/lege
 <summary>Task 2</summary>
 
 ```html
-goto="image-part(${droid.name})@image-viewport+stats-part(${droid.name})@stats-viewport"
+goto="image-part(${legend.name})@image-viewport+stats-part(${legend.name})@stats-viewport"
 ```
 
 </details>

@@ -1,5 +1,3 @@
-import { HttpClient } from "aurelia";
-
 import { DataService } from "../../services/dataService";
 import { IDataService } from "../../common/IDataService";
 

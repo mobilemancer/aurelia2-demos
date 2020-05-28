@@ -137,6 +137,7 @@ The possibility of independent navigation in different viewports and the ease of
 #### Tasks
 
 1. Add another viewport that can be used for the [shopping-cart](./../src\components\shopping-cart\shopping-cart.html) component. (Should be added in the root app ie. [my-app.html](./../src/my-app.html))
+2. Make sure to lock it down to only be used by the `shopping-cart` component, and make sure it doesn't show in the URL.
 
 <details>
 <summary>Task 1</summary>
@@ -145,7 +146,18 @@ The possibility of independent navigation in different viewports and the ease of
 <au-viewport></au-viewport>
 ```
 
-Properties: default, used-by, no-link
+</details>
+
+<details>
+<summary>Task 2</summary>
+
+```html
+<au-viewport
+  default="shopping-cart"
+  used-by="shopping-cart"
+  no-link
+></au-viewport>
+```
 
 </details>
 
@@ -153,4 +165,25 @@ Obs! Note how routing through modules and pages are separate from the viewport r
 
 ## Value Converters
 
-Value Converters are excellent tools for bending values to comply with our needs for presentation. Text in, text out.
+Value Converters are excellent tools for bending values to comply with our needs for presentation. Text in, text out. Avoids simple formatting code all over your code base.
+
+#### Tasks
+
+1. Change the [stats-part](./../src/modules/legends/components/stats/stats-part.html) component. Make it use a value converter for formatting the Mass and Height properties. The value converters are already implemented and used in other places in the organization.
+
+<details>
+<summary>Task 1</summary>
+
+```html
+<div class="stat-row">
+  <span class="label">Mass</span>
+  <span class="value">${legend.mass | massFormater}</span>
+</div>
+
+<div class="stat-row">
+  <span class="label">Height</span>
+  <span class="value">${legend.height | lengthFormater}</span>
+</div>
+```
+
+</details>

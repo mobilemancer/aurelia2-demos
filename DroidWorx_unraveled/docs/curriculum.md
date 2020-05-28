@@ -122,6 +122,37 @@ goto="image-part(${legend.name})@image-viewport+stats-part(${legend.name})@stats
 
 </details>
 
+<details>
+<summary>Task 2 - The Aurelia way</summary>
+
+```html
+<a
+  goto.bind="[{ component: 'stats-part', parameters: { legend }, viewport: 'stats-viewport' }, { component: 'image-part', parameters: { legend }, viewport: 'image-viewport' }]"
+></a>
+```
+
+Modify image-part.ts
+
+```typescript
+  public enter(params: object) {
+    if (!params) return;
+    const legend = <ILegend>params["legend"];
+    this.source = "./../../../../../content/images/legends/" + legend.image;
+  }
+```
+
+Modify stat-part.ts
+
+```typescript
+public enter(params: object) {
+  debugger;
+  if (!params) return;
+  this.legend = <ILegend>params["legend"];
+}
+```
+
+</details>
+
 ## Independent ViewPorts
 
 The possibility of independent navigation in different viewports and the ease of populating multiple viewports without config changes how we approach routing. This ease of use and flexibility enables us to start thinking of viewports not just as big canvases to draw pages on, but more as independent design elements.

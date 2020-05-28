@@ -126,6 +126,10 @@ goto="image-part(${legend.name})@image-viewport+stats-part(${legend.name})@stats
 
 The possibility of independent navigation in different viewports and the ease of populating multiple viewports without config changes how we approach routing. This ease of use and flexibility enables us to start thinking of viewports not just as big canvases to draw pages on, but more as independent design elements.
 
+### Assignment: Use the router to enable a Shopping-Cart
+
+The customer needs us to finish implementing the shopping-cart. Use the router and make sure it doesn't hinder the other navigation.
+
 #### Tasks
 
 1. Add another viewport that can be used for the [shopping-cart](./../src\components\shopping-cart\shopping-cart.html) component. (Should be added in the root app ie. [my-app.html](./../src/my-app.html))
@@ -159,9 +163,13 @@ Obs! Note how routing through modules and pages are separate from the viewport r
 
 Value Converters are excellent tools for bending values to comply with our needs for presentation. Text in, text out. Avoids simple formatting code all over your code base.
 
+### Assignment: Reduce boilerplate code by using Value Converters
+
+The customer demands us to adhere to SOLID principles! Move some view formatting code that is needed in other places on the site.
+
 #### Tasks
 
-1. Change the [stats-part](./../src/modules/legends/components/stats/stats-part.html) component. Make it use a value converter for formatting the Mass and Height properties. The value converters are already implemented and used in other places in the organization.
+1. Change the [stats-part](./../src/modules/legends/components/stats/stats-part.html) component. Make it use a value converter for formatting the Mass and Height properties. The value converters are already implemented and used in other places in the app.
 
 <details>
 <summary>Task 1</summary>

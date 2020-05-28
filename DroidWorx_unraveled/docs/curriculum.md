@@ -155,12 +155,10 @@ The possibility of independent navigation in different viewports and the ease of
 <summary>Task 1</summary>
 
 ```html
-<au-viewport
-  default="shopping-cart"
-  used-by="shopping-cart"
-  no-link
-></au-viewport>
+<au-viewport></au-viewport>
 ```
+
+Properties: default, used-by, no-link
 
 </details>
 

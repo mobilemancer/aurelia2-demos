@@ -1,14 +1,8 @@
-import { DataService } from "./../../../../services/dataService";
-import { IDataService } from "../../../../common/IDataService";
-
 export class ImagePart {
-  public source: string;
+  public imgSource: string;
 
-  constructor(@IDataService private dataService: DataService) {}
-
-  public enter(droidName: object) {
-    if (!droidName || !droidName[0]) return false;
-    const legend = this.dataService.getLegend(droidName[0]);
-    this.source = "./../../../../../content/images/legends/" + legend.image;
+  public enter(params: object) {
+    if (!params) { return false; }
+    this.imgSource = "./../../../../../content/images/legends/" + params['legend'].image;
   }
 }

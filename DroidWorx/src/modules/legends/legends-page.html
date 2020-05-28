@@ -6,20 +6,20 @@
       </h2>
     </div>
 
-    <div class="legend-item" repeat.for="droid of legends">
+    <div class="legend-item" repeat.for="legend of legends">
+      <!-- goto="image-part(${legend.name})@image-viewport+stats-part(${legend.name})@stats-viewport" -->
       <a
-        goto="image-part(${droid.name})@image-viewport+stats-part(${droid.name})@stats-viewport"
-      >
-        <h1>${droid.name}</h1>
+        goto.bind="[{ component: 'stats-part', parameters: { legend } }, { component: 'image-part', parameters: { legend } }]">
+        <h1>${legend.name}</h1>
       </a>
     </div>
   </div>
 
   <div class="images">
-    <au-viewport name="image-viewport" scoped></au-viewport>
+    <au-viewport name="image-viewport" used-by="image-part" no-link></au-viewport>
   </div>
 
   <div class="stats">
-    <au-viewport name="stats-viewport" scoped></au-viewport>
+    <au-viewport name="stats-viewport" used-by="stats-part" no-link></au-viewport>
   </div>
 </div>

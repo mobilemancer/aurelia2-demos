@@ -87,14 +87,6 @@ click.trigger = "filterProduct(item.productName)";
 
 </details>
 
-## Template Repeaters
-
-for.of
-
-## Template Conditionals
-
-if.bind
-
 ## Router
 
 The new router is able to handle routing with and without route configurations. Using routing without a config makes it very easy to populate a multitude of viewports on the screen that can navigate independetly of each other. Populating multiple viewports from the same string is done with `+`.

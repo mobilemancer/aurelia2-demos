@@ -7,15 +7,14 @@ export class ShoppingCart {
     imgSource: string;
     price: number;
   }[] = [];
-  public totalPrice: number = 0;
+  public totalPrice = 0;
 
   private eventListeners: IDisposable[] = [];
 
   constructor(@IEventAggregator private eventAggregator: EventAggregator) {
     this.eventListeners.push(
       eventAggregator.subscribe("add-item", (product: any) => {
-        let prod = this.cart.filter((p) => p.productName === product.model);
-        debugger;
+        const prod = this.cart.filter((p) => p.productName === product.model);
         if (prod.length === 0) {
           this.cart.push({
             productName: product.model,
@@ -28,7 +27,7 @@ export class ShoppingCart {
         }
 
         this.calculateTotalPrice();
-      })
+      }),
     );
   }
 

@@ -1,3 +1,5 @@
 export class HomePage {
-  public visitors: number = 487984566;
+  public visitors = 487984566;
+  public droidName = "";
+  public imgSource = "";
 }

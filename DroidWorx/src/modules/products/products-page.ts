@@ -1,11 +1,10 @@
 import { bindable } from "aurelia";
 
-import { IDroid } from "./../../common/IDroid";
-import { IDataService } from "../../common/IDataService";
-import { DataService } from "../../services/dataService";
+import { Droid } from "../../common/Droid";
+import { DataService, IDataService } from "../../services/dataService";
 
 export class ProductsPage {
-  @bindable public filteredProducts: IDroid[] = [];
+  @bindable public filteredProducts: Droid[] = [];
   public productRecommendations = [];
 
   constructor(@IDataService dataService: DataService) {

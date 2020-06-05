@@ -2,8 +2,7 @@ import Aurelia, { RouterConfiguration, Registration } from "aurelia";
 
 import { MyApp } from "./my-app";
 
-import { DataService } from "./services/dataService";
-import { IDataService } from "./common/IDataService";
+import { DataService, IDataService } from "./services/dataService";
 
 import * as Components from "./components/globalComponents";
 import * as Modules from "./modules/globalModules";
@@ -15,7 +14,7 @@ Aurelia.register(
 
   Modules,
   Components,
-  ValueConverters
+  ValueConverters,
 )
   .app(MyApp)
   .start();

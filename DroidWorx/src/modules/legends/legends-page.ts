@@ -1,16 +1,12 @@
 import { HttpClient } from "aurelia";
 
-import { DataService } from "../../services/dataService";
-import { IDataService } from "../../common/IDataService";
+import { DataService, IDataService } from "../../services/dataService";
 
 export class LegendsPage {
   public legends: any[];
   public elementName = "legend-component";
 
-  constructor(
-    @IDataService private dataService: DataService,
-    private httpClient: HttpClient
-  ) {}
+  constructor(@IDataService private dataService: DataService, private httpClient: HttpClient) {}
 
   public async beforeBind() {
     if (!this.legends || this.legends?.length === 0) {

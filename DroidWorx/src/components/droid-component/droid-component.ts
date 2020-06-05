@@ -1,9 +1,9 @@
 import { bindable, IEventAggregator, EventAggregator } from "aurelia";
 
-import { IDroid } from "../../common/IDroid";
+import { Droid } from "../../common/Droid";
 
 export class DroidComponent {
-  @bindable public droid: IDroid;
+  @bindable public droid: Droid;
   public imgSource: string;
 
   constructor(@IEventAggregator private eventAggregator: EventAggregator) {}

@@ -1,10 +1,10 @@
-import { ILegend } from "./../../../../common/ILegend";
+import { Legend } from "../../../../common/Legend";
 
 export class StatsPart {
-  public legend: ILegend;
+  public legend: Legend;
 
   public enter(params: object) {
     if (!params) return false;
-    this.legend = params['legend'];
+    this.legend = params["legend"];
   }
 }

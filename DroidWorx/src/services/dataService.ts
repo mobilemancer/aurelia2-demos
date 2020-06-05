@@ -1,15 +1,20 @@
-import { IProductRecommendation } from "./../common/IProductRecommendation";
-import { IFilterProperties } from "./../common/IFilterProperties";
-import { IDroid } from "./../common/IDroid";
-import { ILegend } from "../common/ILegend";
+import { ProductRecommendation } from "../common/ProductRecommendation";
+import { FilterProperties } from "../common/FilterProperties";
+import { Droid } from "../common/Droid";
+import { Legend } from "../common/Legend";
 
 import legends from "../../data/legends.json";
 import products from "../../data/products.json";
 import productRecommendations from "../../data/product-recommendations.json";
+import { DI } from "aurelia";
+
+export const IDataService = DI.createInterface<DataService>("IDataService").withDefault((x) =>
+  x.singleton(DataService),
+);
 
 export class DataService {
-  public legends: ILegend[] = [];
-  public products: IDroid[] = [];
+  public legends: Legend[] = [];
+  public products: Droid[] = [];
   private productRecommendations: any[] = [];
 
   constructor() {
@@ -18,7 +23,7 @@ export class DataService {
     this.productRecommendations = productRecommendations;
   }
 
-  public getLegend(name: string): ILegend {
+  public getLegend(name: string): Legend {
     if (!name || name === "") {
       throw new Error("Invalid argument!");
     }
@@ -28,11 +33,8 @@ export class DataService {
     })[0];
   }
 
-  public filterProducts(
-    fragment: string,
-    filterProps: IFilterProperties
-  ): IDroid[] {
-    let res = this.filterByText(fragment).filter((d) => {
+  public filterProducts(fragment: string, filterProps: FilterProperties): Droid[] {
+    const res = this.filterByText(fragment).filter((d) => {
       return (
         (filterProps.arakyd && d.manufacturer.includes("Arakyd")) ||
         (filterProps.automaton && d.manufacturer.includes("Automaton")) ||
@@ -42,27 +44,22 @@ export class DataService {
     return res;
   }
 
-  public getRecommendations(amount: number): IProductRecommendation[] {
+  public getRecommendations(amount: number): ProductRecommendation[] {
     const results = [];
     do {
-      const item = this.productRecommendations[
-        Math.floor(Math.random() * this.productRecommendations.length)
-      ];
+      const item = this.productRecommendations[Math.floor(Math.random() * this.productRecommendations.length)];
       if (results.indexOf(item) < 0) results.push(item);
     } while (results.length < amount);
     return results;
   }
 
-  private filterByText(fragment: string): IDroid[] {
+  private filterByText(fragment: string): Droid[] {
     if (!fragment || fragment === "") {
       return this.products;
     } else {
       fragment = fragment.toLowerCase();
       return this.products.filter((d) => {
-        return (
-          d.class.toLowerCase().includes(fragment) ||
-          d.model.toLowerCase().includes(fragment)
-        );
+        return d.class.toLowerCase().includes(fragment) || d.model.toLowerCase().includes(fragment);
       });
     }
   }

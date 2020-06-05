@@ -1,43 +1,31 @@
-import {
-  bindable,
-  IEventAggregator,
-  EventAggregator,
-  IDisposable,
-} from "aurelia";
+import { bindable, IEventAggregator, EventAggregator, IDisposable } from "aurelia";
 
-import { DataService } from "./../../services/dataService";
-import { IDataService } from "../../common/IDataService";
-import { IDroid } from "./../../common/IDroid";
-import { IFilterProperties } from "../../common/IFilterProperties";
+import { DataService, IDataService } from "./../../services/dataService";
+import { Droid } from "../../common/Droid";
+import { FilterProperties } from "../../common/FilterProperties";
 
 export class ProductFilter {
-  @bindable public filteredProducts: IDroid[];
+  @bindable public filteredProducts: Droid[];
 
   @bindable public searchText: string;
 
   @bindable public arakyd: boolean;
   @bindable public cybot: boolean;
   @bindable public automaton: boolean;
-  private filterProperties: IFilterProperties = {
+  private filterProperties: FilterProperties = {
     arakyd: true,
     cybot: true,
     automaton: true,
   };
   private eventListeners: IDisposable[] = [];
 
-  constructor(
-    @IDataService private dataService: DataService,
-    @IEventAggregator eventAggregator: EventAggregator
-  ) {
-    this.filteredProducts = dataService.filterProducts(
-      "",
-      this.filterProperties
-    );
+  constructor(@IDataService private dataService: DataService, @IEventAggregator eventAggregator: EventAggregator) {
+    this.filteredProducts = dataService.filterProducts("", this.filterProperties);
 
     this.eventListeners.push(
       eventAggregator.subscribe("filter", (model: string) => {
         this.searchText = model;
-      })
+      }),
     );
   }
 
@@ -46,33 +34,21 @@ export class ProductFilter {
   }
 
   public searchTextChanged(val: string): void {
-    this.filteredProducts = this.dataService.filterProducts(
-      val,
-      this.filterProperties
-    );
+    this.filteredProducts = this.dataService.filterProducts(val, this.filterProperties);
   }
 
   public arakydChanged(val) {
     this.filterProperties.arakyd = val;
-    this.filteredProducts = this.dataService.filterProducts(
-      this.searchText,
-      this.filterProperties
-    );
+    this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }
 
   public automatonChanged(val) {
     this.filterProperties.automaton = val;
-    this.filteredProducts = this.dataService.filterProducts(
-      this.searchText,
-      this.filterProperties
-    );
+    this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }
 
   public cybotChanged(val) {
     this.filterProperties.cybot = val;
-    this.filteredProducts = this.dataService.filterProducts(
-      this.searchText,
-      this.filterProperties
-    );
+    this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }
 }

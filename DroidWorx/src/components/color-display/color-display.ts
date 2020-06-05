@@ -6,18 +6,15 @@ export class ColorDisplay {
 
   public afterBind() {
     this.colors.forEach((colorDescription) => {
-      let colors = colorDescription.split("&");
+      const colors = colorDescription.split("&");
       colorDescription = colorDescription.replace("&", " & ");
       let style = "";
       colors.forEach((color) => {
-        let index = colors.findIndex((s) => s === color);
+        const index = colors.findIndex((s) => s === color);
         color = this.hexConvert(color);
         style =
           "background: radial-gradient(circle at 15px 15px," +
-          `${this.modifyColor(
-            color,
-            40
-          )} 0, ${color} 25%, #333333); margin-left:${index * -25}px`;
+          `${this.modifyColor(color, 40)} 0, ${color} 25%, #333333); margin-left:${index * -25}px`;
         this.computedColors.push({ text: colorDescription, style: style });
       });
     });

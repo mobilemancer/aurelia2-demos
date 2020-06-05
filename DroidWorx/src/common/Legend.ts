@@ -1,4 +1,4 @@
-export interface ILegend {
+export interface Legend {
   name: string;
   allegiance: string;
   manufacturer: string;

@@ -1,4 +1,5 @@
 import { IEventAggregator, EventAggregator, IDisposable } from "aurelia";
+import { Droid } from "../../common/Droid";
 
 export class ShoppingCart {
   public cart: {
@@ -13,7 +14,7 @@ export class ShoppingCart {
 
   constructor(@IEventAggregator private eventAggregator: EventAggregator) {
     this.eventListeners.push(
-      eventAggregator.subscribe("add-item", (product: any) => {
+      eventAggregator.subscribe("add-item", (product: Droid) => {
         const prod = this.cart.filter((p) => p.productName === product.model);
         if (prod.length === 0) {
           this.cart.push({
@@ -31,7 +32,7 @@ export class ShoppingCart {
     );
   }
 
-  public afterUnbind() {
+  public afterUnbind(): void {
     this.eventListeners.forEach((el) => el.dispose());
   }
 
@@ -43,7 +44,7 @@ export class ShoppingCart {
     this.totalPrice = total;
   }
 
-  public filterProduct(model: string) {
+  public filterProduct(model: string): void {
     this.eventAggregator.publish("filter", model);
   }
 

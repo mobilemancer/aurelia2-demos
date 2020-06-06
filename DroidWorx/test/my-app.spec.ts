@@ -1,14 +1,17 @@
-import Aurelia, { StyleConfiguration, CustomElement } from "aurelia";
+import Aurelia, { CustomElement } from "aurelia";
 import { MyApp } from "../src/my-app";
 
-function createAu(template: string, ...deps: readonly unknown[]) {
+function createAu(
+  template: string,
+  ...deps: readonly unknown[]
+): Pick<Aurelia, "container" | "isRunning" | "isStarting" | "isStopping" | "root" | "start" | "stop" | "wait"> {
   const wrapper = CustomElement.define({ name: "wrapper", template });
   document.body.appendChild(document.createElement("wrapper"));
   // return Aurelia.register(StyleConfiguration.cssModulesProcessor()).register(deps).app(wrapper);
   return Aurelia.register().register(deps).app(wrapper);
 }
 
-function cleanup() {
+function cleanup(): void {
   const wrapper = document.querySelector("wrapper");
   if (wrapper) {
     wrapper.remove();

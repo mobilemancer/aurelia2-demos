@@ -1,21 +1,18 @@
-import { ProductRecommendation } from "../common/ProductRecommendation";
-import { FilterProperties } from "../common/FilterProperties";
+import { DI } from "aurelia";
+
 import { Droid } from "../common/Droid";
+import { FilterProperties } from "../common/FilterProperties";
 import { Legend } from "../common/Legend";
+import { Recommendation } from "../common/Recommendation";
 
 import legends from "../../data/legends.json";
 import products from "../../data/products.json";
 import productRecommendations from "../../data/product-recommendations.json";
-import { DI } from "aurelia";
-
-export const IDataService = DI.createInterface<DataService>("IDataService").withDefault((x) =>
-  x.singleton(DataService),
-);
 
 export class DataService {
   public legends: Legend[] = [];
   public products: Droid[] = [];
-  private productRecommendations: any[] = [];
+  private productRecommendations: Recommendation[] = [];
 
   constructor() {
     this.legends = legends;
@@ -44,7 +41,7 @@ export class DataService {
     return res;
   }
 
-  public getRecommendations(amount: number): ProductRecommendation[] {
+  public getRecommendations(amount: number): Recommendation[] {
     const results = [];
     do {
       const item = this.productRecommendations[Math.floor(Math.random() * this.productRecommendations.length)];
@@ -64,3 +61,7 @@ export class DataService {
     }
   }
 }
+
+export const IDataService = DI.createInterface<DataService>("IDataService").withDefault((x) =>
+  x.singleton(DataService),
+);

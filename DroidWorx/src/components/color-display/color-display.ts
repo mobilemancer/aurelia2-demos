@@ -4,7 +4,7 @@ export class ColorDisplay {
   @bindable public colors: string[];
   public computedColors: { text: string; style: string }[] = [];
 
-  public afterBind() {
+  public afterBind(): void {
     this.colors.forEach((colorDescription) => {
       const colors = colorDescription.split("&");
       colorDescription = colorDescription.replace("&", " & ");

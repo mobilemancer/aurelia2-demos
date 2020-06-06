@@ -29,7 +29,7 @@ export class ProductFilter {
     );
   }
 
-  public afterUnbind() {
+  public afterUnbind(): void {
     this.eventListeners.forEach((el) => el.dispose());
   }
 
@@ -37,17 +37,17 @@ export class ProductFilter {
     this.filteredProducts = this.dataService.filterProducts(val, this.filterProperties);
   }
 
-  public arakydChanged(val) {
+  public arakydChanged(val): void {
     this.filterProperties.arakyd = val;
     this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }
 
-  public automatonChanged(val) {
+  public automatonChanged(val): void {
     this.filterProperties.automaton = val;
     this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }
 
-  public cybotChanged(val) {
+  public cybotChanged(val): void {
     this.filterProperties.cybot = val;
     this.filteredProducts = this.dataService.filterProducts(this.searchText, this.filterProperties);
   }

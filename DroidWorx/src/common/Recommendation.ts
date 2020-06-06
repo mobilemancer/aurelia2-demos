@@ -1,4 +1,4 @@
-export interface ProductRecommendation {
+export interface Recommendation {
   productName: string;
   user: string;
   quote: string;

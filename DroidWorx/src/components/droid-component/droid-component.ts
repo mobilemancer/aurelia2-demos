@@ -8,15 +8,15 @@ export class DroidComponent {
 
   constructor(@IEventAggregator private eventAggregator: EventAggregator) {}
 
-  public afterBind() {
+  public afterBind(): void {
     this.imgSource = this.productImage(this.droid.model);
   }
 
-  public addToCart() {
+  public addToCart(): void {
     this.eventAggregator.publish("add-item", this.droid);
   }
 
-  private productImage(model: string) {
+  private productImage(model: string): string {
     if (!model || model === "") return "";
     const fileName = model.replace(/\s/g, "_") + ".png";
     return "./../../../../../content/images/products/" + fileName;

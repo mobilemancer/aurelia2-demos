@@ -3,7 +3,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: 30% 70%;
-  grid-template-rows: 62% max-content;
+  grid-template-rows: calc(100vh - 334px - var(--menu-height)) auto;
   grid-template-areas: "left upper-right" "left lower-right";
 }
 

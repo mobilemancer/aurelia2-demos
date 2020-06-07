@@ -7,9 +7,9 @@
     </div>
 
     <div class="legend-item" repeat.for="legend of legends">
-      <!-- goto="image-part(${legend.name})@image-viewport+stats-part(${legend.name})@stats-viewport" -->
       <a
-        goto.bind="[{ component: 'stats-part', parameters: { legend } }, { component: 'image-part', parameters: { legend } }]">
+        goto.bind="[{ component: 'stats-part', parameters: { legend } }, { component: 'image-part', parameters: { legend } }]"
+      >
         <h1>${legend.name}</h1>
       </a>
     </div>

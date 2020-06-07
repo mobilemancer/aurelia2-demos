@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 300px auto;
   grid-template-rows: 75% 25%;
-  grid-template-areas: "upper-left upper-right" "lower-left lower-right";
+  grid-template-areas: "upper-left upper-right" "lower lower";
 }
 
 .products {
@@ -15,7 +15,7 @@
 }
 
 .recommendations {
-  grid-area: auto;
-  display: flex;
-  flex-direction: row;
+  grid-area: lower;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
 }

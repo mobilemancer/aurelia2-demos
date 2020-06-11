@@ -23,7 +23,7 @@
       <div class="product" click.trigger="filterProduct(item.productName)">${item.productName}</div>
 
       <div class="quantity">
-        <input type="number" min="1" value.bind="item.qty" change.trigger="calculateTotalPrice()" />
+        <input type="number" min="1" value.bind="item.qty" change.trigger="calculateTotals()" />
       </div>
 
       <div class="price">${item.price}</div>

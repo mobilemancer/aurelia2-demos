@@ -15,6 +15,21 @@ nav a {
 .cart {
   float: right;
   height: 100%;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.item-count {
+  font-size: 10px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -2px;
+  bottom: 4px;
+  right: 12px;
+  background-color: #a82da8;
+  border-radius: 50%;
 }
 
 .cart img {

@@ -9,6 +9,7 @@ export class ShoppingCart {
     price: number;
   }[] = [];
   public totalPrice = 0;
+  public totalCount: number = 0;
 
   private eventListeners: IDisposable[] = [];
 
@@ -24,10 +25,10 @@ export class ShoppingCart {
             price: product.price,
           });
         } else {
-          prod[0].qty += 1;
+          ++prod[0].qty;
         }
 
-        this.calculateTotalPrice();
+        this.calculateTotals();
       }),
     );
   }
@@ -36,12 +37,25 @@ export class ShoppingCart {
     this.eventListeners.forEach((el) => el.dispose());
   }
 
-  public calculateTotalPrice(): void {
+  calculateTotals() {
+    this.totalPrice = this.calculateTotalPrice();
+    this.totalCount = this.calculateTotalCount();
+  }
+
+  private calculateTotalPrice(): number {
     let total = 0;
     this.cart.forEach((p) => {
       total = total + p.qty * p.price;
     });
-    this.totalPrice = total;
+    return total;
+  }
+
+  private calculateTotalCount(): number {
+    let total = 0;
+    this.cart.forEach((p) => {
+      total = total + parseFloat(<any>p.qty);
+    });
+    return total;
   }
 
   public filterProduct(model: string): void {
